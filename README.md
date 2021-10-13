@@ -1,21 +1,5 @@
 # CodeIgniter 4 Application Starter
 
-test di ubah nih
-
-SANDI NIH CUYYY HIHU
-
-asdfghklkl
-
-TAMBAHAN DANNY GANTENG
-
-ALDI ANAK BAGEUR + SOLEH
-
-TE JIGA DANY
-
-
-gasdsadasfsadas
-
-awdawdawd
 ## What is CodeIgniter?
 
 CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
