@@ -9,6 +9,7 @@
 <body>
 
     <h1>ADMIN PAGE</h1>
+    <h2>Selamat datang</h2>
 
     <ul>
         <li><a href="">Data Sparepart</a></li>

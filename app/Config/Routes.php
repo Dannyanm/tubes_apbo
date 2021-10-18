@@ -31,7 +31,34 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+// routes home
 $routes->get('/', 'Home::index');
+
+// routes admin
+$routes->get('/admin', 'Admin\Admin::index');
+
+// routes users
+$routes->get('/users', 'Users\Customer::index');
+// $routes->get('/users/registration', 'Users\Customer::registration');
+$routes->get('/users/(:segment)', 'Users\Customer::$1');
+
+/*
+
+Placeholders are simply strings that represent a Regular Expression pattern. During the routing process, these placeholders are replaced with the value of the Regular Expression. They are primarily used for readability.
+
+The following placeholders are available for you to use in your routes:
+
+(:any)	    = will match all characters from that point to the end of the URI. This may include multiple URI segments.
+(:segment)  = will match any character except for a forward slash (/) restricting the result to a single segment.
+(:num)	    = will match any integer.
+(:alpha)	= will match any string of alphabetic characters
+(:alphanum)	= will match any string of alphabetic characters or integers, or any combination of the two.
+(:hash)	    = is the same as (:segment), but can be used to easily see which routes use hashed ids (see the Model docs).
+
+*/
+
+
 
 
 /*
