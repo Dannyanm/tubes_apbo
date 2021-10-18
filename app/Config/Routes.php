@@ -37,6 +37,7 @@ $routes->get('/', 'Home::index');
 
 // routes admin
 $routes->get('/admin', 'Admin\Admin::index');
+$routes->get('/admin/(:segment)', 'Admin\Admin::$1');
 
 // routes users
 $routes->get('/users', 'Users\Customer::index');
