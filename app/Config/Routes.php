@@ -37,12 +37,13 @@ $routes->get('/', 'Home::index');
 
 // routes admin
 $routes->get('/admin', 'Admin\Admin::index');
-$routes->get('/admin/(:segment)', 'Admin\Admin::$1');
+// $routes->get('/admin/(:segment)', 'Admin\Admin::$1');
+$routes->get('/admin/pages/(:segment)', 'Admin\Admin::$1');
 
 // routes users
 $routes->get('/users', 'Users\Customer::index');
 // $routes->get('/users/registration', 'Users\Customer::registration');
-$routes->get('/users/(:segment)', 'Users\Customer::$1');
+$routes->get('/users/pages/(:segment)', 'Users\Customer::$1');
 
 /*
 

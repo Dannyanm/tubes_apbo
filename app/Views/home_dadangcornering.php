@@ -10,6 +10,11 @@
 
 <h1>SELAMAT DATANG DI BENGKEL DADANG CORNERING</h1>
 
+<a href="/admin">Ke Halaman Admin</a>
+<br>
+<br>
+<a href="/users">Ke Halaman Customer</a>
+
 
 </body>
 </html>
