@@ -8,47 +8,47 @@ class Admin extends BaseController{
 
     public function index()
     {
-        return view('admin/home');
+        echo view('admin/home');
     }
 
     public function sparepart()
     {
-        return view('admin/sparepart');
+        echo view('admin/sparepart');
     }
 
     public function booking()
     {
-        return view('admin/booking');
+        echo view('admin/booking');
     }
 
     public function service()
     {
-        return view('admin/service');
+        echo view('admin/service');
     }
     
     public function penjualan()
     {
-        return view('admin/penjualan');
+        echo view('admin/penjualan');
     }
     
     public function pembayaran()
     {
-        return view('admin/pembayaran');
+        echo view('admin/pembayaran');
     }
     
     public function mekanik()
     {
-        return view('admin/mekanik');
+        echo view('admin/mekanik');
     }
     
     public function barang()
     {
-        return view('admin/barang');
+        echo view('admin/barang');
     }
     
     public function grafik()
     {
-        return view('admin/grafik');
+        echo view('admin/grafik');
     }
 
 }
