@@ -1,4 +1,4 @@
-# Tugas Besar Analisis Perancangan Berbasis Objek (On Process)
+# Tugas Besar Analisa Perancangan Berbasis Objek (On Process)
 
 Pembuatan Aplikasi Bengkel Motor Berbasis Web
 
