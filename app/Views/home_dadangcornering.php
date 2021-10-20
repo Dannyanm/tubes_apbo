@@ -13,7 +13,7 @@
 <a href="/admin">Ke Halaman Admin</a>
 <br>
 <br>
-<a href="/users">Ke Halaman Customer</a>
+<a href="/customer">Ke Halaman Customer</a>
 
 
 </body>

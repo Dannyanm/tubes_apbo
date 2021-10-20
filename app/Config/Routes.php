@@ -40,10 +40,10 @@ $routes->get('/admin', 'Admin\Admin::index');
 // $routes->get('/admin/(:segment)', 'Admin\Admin::$1');
 $routes->get('/admin/pages/(:segment)', 'Admin\Admin::$1');
 
-// routes users
-$routes->get('/users', 'Users\Customer::index');
-// $routes->get('/users/registration', 'Users\Customer::registration');
-$routes->get('/users/pages/(:segment)', 'Users\Customer::$1');
+// routes customer
+$routes->get('/customer', 'Customer\Customer::index');
+$routes->get('/customer/(:segment)', 'Customer\Customer::$1');
+$routes->get('/customer/pages/(:segment)', 'Customer\Customer::$1');
 
 /*
 

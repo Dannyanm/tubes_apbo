@@ -16,36 +16,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
+
     <title>Page</title>
 </head>
 <body>
 
 <div class="container-fluid p-2">
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand fluid" href="/">DADANG CORNERING</a>
+        <a class="navbar-brand" href="/">DADANG CORNERING</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="/admin">Home</a>
-            <a class="nav-link" href="/admin/pages/sparepart">Data Sparepart</a>
-            <a class="nav-link" href="/admin/pages/service">Data Service</a>
-            <a class="nav-link" href="/admin/pages/penjualan">Data Penjualan</a>
-            <a class="nav-link" href="/admin/pages/pembayaran">Data Sparepart</a>
-            <a class="nav-link" href="/admin/pages/mekanik">Data Mekanik</a>
-            <a class="nav-link" href="/admin/pages/barang">Data Barang</a>
-            <a class="nav-link" href="/admin/pages/grafik">Grafik</a>
+            <a class="nav-link active" aria-current="page" href="/customer">Home</a>
+            <a class="nav-link" href="/customer/pages/booking">Booking Service</a>
+            <a class="nav-link" href="/customer/pages/change_password">Ubah Password</a> <!-- need fix here -->
+            <a class="nav-link" href="/customer/pages/pembayaran">Menu Pembayaran</a>
+            <a class="nav-link" href="/customer/pages/profil">Profil</a> <!-- need fix here -->
+            <a class="nav-link" href="/customer/pages/registration">Registrasi</a> <!-- need fix here -->
+            <a class="nav-link" href="/customer/pages/spareparts">List Spareparts</a>
 
         </div>
         </div>
     </div>
     </nav>
-
 </div>
 
 
+<div class="container-fluid" id="poppins">
 
-<div class="container-fluid">
+
