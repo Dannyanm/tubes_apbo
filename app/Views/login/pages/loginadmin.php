@@ -1,4 +1,4 @@
-<div id="login-button">
+<div id="login-button" class="login-button">
   <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
   </img>
 </div>
