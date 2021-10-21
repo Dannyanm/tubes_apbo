@@ -45,6 +45,9 @@ $routes->get('/customer', 'Customer\Customer::index');
 $routes->get('/customer/(:segment)', 'Customer\Customer::$1');
 $routes->get('/customer/pages/(:segment)', 'Customer\Customer::$1');
 
+//routes login
+$routes->get('/login', 'Login\Login::index');
+$routes->get('/login/pages/(:segment)', 'Login\Login::$1');
 /*
 
 Placeholders are simply strings that represent a Regular Expression pattern. During the routing process, these placeholders are replaced with the value of the Regular Expression. They are primarily used for readability.
