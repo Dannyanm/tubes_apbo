@@ -7,6 +7,13 @@ class Home extends BaseController
     public function index()
     {
         // return view('welcome_message');
-        return view('home_dadangcornering'); // landing page
+
+        // landing page
+        $data = [
+            'title' => 'Home | Dadang Cornering'
+        ];
+        echo view('/home/header', $data);
+        echo view('/home/index');
+        echo view('/home/header');
     }
 }

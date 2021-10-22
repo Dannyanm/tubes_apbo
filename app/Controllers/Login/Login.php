@@ -12,7 +12,7 @@ class Login extends BaseController{
             'title' => 'Login'
         ];
         echo view('login/header', $data);
-        echo view('login/pages/loginadmin');
+        echo view('login/pages/login');
         echo view('login/footer');
     }
 }

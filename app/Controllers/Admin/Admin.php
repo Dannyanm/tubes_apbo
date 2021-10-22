@@ -95,5 +95,16 @@ class Admin extends BaseController{
         echo view('admin/footer');
     }
 
+    public function member()
+    {
+        $data = [
+            'title' => 'Data Member',
+            'user_status' => 'Admin'
+        ];
+        echo view('admin/header', $data);
+        echo view('admin/pages/member');
+        echo view('admin/footer');
+    }
+
 }
 
