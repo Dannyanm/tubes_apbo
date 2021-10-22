@@ -22,7 +22,7 @@
 
 <!-- Forgotten Password Container -->
 <div id="forgotten-container">
-   <h1>Forgotten</h1>
+   <h1>Forgot Password</h1>
   <span class="close-btn">
     <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
   </span>

@@ -8,49 +8,77 @@ class Customer extends BaseController{
 
     public function index()
     {
-        echo view('customer/header');
+        $data = [
+            'title' => 'Home Customer',
+            'user_status' => 'Customer'
+        ];
+        echo view('customer/header', $data);
         echo view('customer/pages/home');
         echo view('customer/footer');
     }
 
     public function registration()
     {
-        echo view('customer/header');
+        $data = [
+            'title' => 'Registrasi Customer',
+            'user_status' => 'Customer'
+        ];
+        echo view('customer/header', $data);
         echo view('customer/pages/registration');
         echo view('customer/footer');
     }
 
     public function spareparts()
     {
-        echo view('customer/header');
+        $data = [
+            'title' => 'Spareparts',
+            'user_status' => 'Customer'
+        ];
+        echo view('customer/header', $data);
         echo view('customer/pages/spareparts');
         echo view('customer/footer');
     }
 
     public function booking()
     {
-        echo view('customer/header');
+        $data = [
+            'title' => 'Booking Service',
+            'user_status' => 'Customer'
+        ];
+        echo view('customer/header', $data);
         echo view('customer/pages/booking');
         echo view('customer/footer');
     }
 
     public function change_password()
     {
-        echo view('customer/header');
+        $data = [
+            'title' => 'Change Password',
+            'user_status' => 'Customer'
+        ];
+        echo view('customer/header', $data);
         echo view('customer/pages/change_password');
         echo view('customer/footer');
     }
 
     public function profil()
     {
-        echo view('customer/header');
+        $data = [
+            'title' => 'Profil',
+            'user_status' => 'Customer'
+        ];
+        echo view('customer/header', $data);
         echo view('customer/pages/profil');
         echo view('customer/footer');
     }
 
     public function pembayaran()
     {
-        echo view('customer/header');
+        $data = [
+            'title' => 'Pembayaran',
+            'user_status' => 'Customer'
+        ];
+        echo view('customer/header', $data);
         echo view('customer/pages/pembayaran');
         echo view('customer/footer');
     }

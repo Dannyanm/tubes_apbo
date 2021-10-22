@@ -5,6 +5,16 @@ body{
     
 }
 
+/* need to fix here 
+refers link at header text "Dadang Cornering" */
+a:link,
+a:visited,
+a:hover,
+a:active { 
+    text-decoration: none; 
+    color: black;
+}
+
 #sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;

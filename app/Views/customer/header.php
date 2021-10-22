@@ -19,21 +19,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-    <title>Page</title>
+    <title><?= $title; ?></title>
 </head>
 <body>
 
 <div class="d-flex" id="wrapper">
     <!-- sidebar -->
     <div class="border-end bg-white" id="sidebar-wrapper">
-        <div class="sidebar-heading border-bottom bg-llight">
-            Dadang Cornering
+        <div class="sidebar-heading border-bottom bg-light">
+            <a href="<?= base_url('/');?>">Dadang Cornering</a>
         </div>
         <div class="list-group list-group-flush">
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="/customer">Home</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="/customer/pages/booking">Booking Service</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="/customer/pages/pembayaran">Pembayaran</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="/customer/pages/spareparts">Data Spareparts</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer');?>">Home</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/pages/booking');?>">Booking Service</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/pages/pembayaran');?>">Pembayaran</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/pages/spareparts');?>">Data Spareparts</a>
         </div>
     </div>
 
@@ -45,7 +45,7 @@
                 <button class="btn btn-primary" id="sidebarToggle">///</button>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="collapse-toggler-icon">Admin</span>
+                    <span class="collapse-toggler-icon"><?= $user_status; ?></span>
                 </button>
                 
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">

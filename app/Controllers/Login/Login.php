@@ -8,7 +8,10 @@ class Login extends BaseController{
 
     public function index()
     {
-        echo view('login/header');
+        $data = [
+            'title' => 'Login'
+        ];
+        echo view('login/header', $data);
         echo view('login/pages/loginadmin');
         echo view('login/footer');
     }
