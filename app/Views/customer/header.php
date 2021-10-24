@@ -31,9 +31,9 @@
         </div>
         <div class="list-group list-group-flush">
             <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer');?>">Home</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/pages/booking');?>">Booking Service</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/pages/pembayaran');?>">Pembayaran</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/pages/spareparts');?>">Data Spareparts</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/booking');?>">Booking Service</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/pembayaran');?>">Pembayaran</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/spareparts');?>">Spareparts</a>
         </div>
     </div>
 

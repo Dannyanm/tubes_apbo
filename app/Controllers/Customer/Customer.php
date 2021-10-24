@@ -5,7 +5,7 @@ namespace App\Controllers\Customer;
 use App\Controllers\BaseController;
 
 class Customer extends BaseController{
-
+    
     public function index()
     {
         $data = [
@@ -17,14 +17,25 @@ class Customer extends BaseController{
         echo view('customer/footer');
     }
 
-    public function registration()
+    public function booking()
     {
         $data = [
-            'title' => 'Registrasi Customer',
+            'title' => 'Booking Service',
             'user_status' => 'Customer'
         ];
         echo view('customer/header', $data);
-        echo view('customer/pages/registration');
+        echo view('customer/pages/booking');
+        echo view('customer/footer');
+    }
+
+    public function pembayaran()
+    {
+        $data = [
+            'title' => 'Pembayaran',
+            'user_status' => 'Customer'
+        ];
+        echo view('customer/header', $data);
+        echo view('customer/pages/pembayaran');
         echo view('customer/footer');
     }
 
@@ -39,14 +50,14 @@ class Customer extends BaseController{
         echo view('customer/footer');
     }
 
-    public function booking()
+    public function registration()
     {
         $data = [
-            'title' => 'Booking Service',
+            'title' => 'Registrasi Customer',
             'user_status' => 'Customer'
         ];
         echo view('customer/header', $data);
-        echo view('customer/pages/booking');
+        echo view('customer/pages/registration');
         echo view('customer/footer');
     }
 
@@ -72,15 +83,5 @@ class Customer extends BaseController{
         echo view('customer/footer');
     }
 
-    public function pembayaran()
-    {
-        $data = [
-            'title' => 'Pembayaran',
-            'user_status' => 'Customer'
-        ];
-        echo view('customer/header', $data);
-        echo view('customer/pages/pembayaran');
-        echo view('customer/footer');
-    }
 }
 ?>

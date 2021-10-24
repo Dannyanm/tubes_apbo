@@ -31,13 +31,13 @@
         </div>
         <div class="list-group list-group-flush">
             <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin');?>">Home</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/pages/member');?>">Data Member</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/pages/spareparts');?>">Data Spareparts</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/pages/service');?>">Data Service</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/pages/penjualan');?>">Data Penjualan</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/pages/pembayaran');?>">Data Pembayaran</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/pages/mekanik');?>">Data Mekanik</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/pages/grafik');?>">Grafik</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/booking');?>">Data Booking</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/mekanik');?>">Data Mekanik</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/member');?>">Data Member</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/pembayaran');?>">Data Pembayaran</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/penjualan');?>">Data Penjualan</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/service');?>">Data Service</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/spareparts');?>">Data Spareparts</a>
         </div>
     </div>
 

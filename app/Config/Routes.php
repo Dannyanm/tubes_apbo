@@ -38,12 +38,14 @@ $routes->get('/', 'Home::index');
 // routes admin
 $routes->get('/admin', 'Admin\Admin::index');
 // $routes->get('/admin/(:segment)', 'Admin\Admin::$1');
-$routes->get('/admin/pages/(:segment)', 'Admin\Admin::$1');
+// $routes->get('/admin/pages/(:segment)', 'Admin\Admin::$1');
+$routes->get('/admin/(:segment)', 'Admin\Admin::$1');
 
 // routes customer
 $routes->get('/customer', 'Customer\Customer::index');
+// $routes->get('/customer/(:segment)', 'Customer\Customer::$1');
+// $routes->get('/customer/pages/(:segment)', 'Customer\Customer::$1');
 $routes->get('/customer/(:segment)', 'Customer\Customer::$1');
-$routes->get('/customer/pages/(:segment)', 'Customer\Customer::$1');
 
 //routes login
 $routes->get('/login', 'Login\Login::index');
