@@ -1,34 +1,27 @@
-<div id="login-button" class="login-button">
-  <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
-  </img>
-</div>
-<div id="container">
-  <h1>Log In</h1>
-  <span class="close-btn">
-    <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
-  </span>
+<div class="form">
+    <div class="form__box">
+        <div class="form__left">
+            <div class="form__padding">
+                
+                <img class="form__image" src="https://i.pinimg.com/originals/8b/44/51/8b4451665d6b2139e29f29b51ffb1829.png" />
+                
+            </div>
+        </div>
+        <div class="form__right">
+            <div class="form__padding-right">
+                <form>
+                    <h1 class="form__title" id="judulForm">Member Login</h1>
+                    <input class="form__email" type="text" placeholder="Email" />
+                    <input class="form__password" type="text" placeholder="******" />
+                    <input class="form__submit-btn" type="submit" value="Login"/>
+                </form>
+                <span>Forgot 
+                    <a class="form__link" href="#">Username</a><a> / </a>
+                    <a class="form__link" href="#">Password</a></span>
+                <p> <a class="form__link" href="#">Create your account</a></p>
+                <p> <a class="form__link" href="<?= base_url('/'); ?>">Kembali Ke Homepage</a></p>
 
-  <form>
-    <input type="email" name="email" placeholder="E-mail">
-    <input type="password" name="pass" placeholder="Password">
-    <a href="#">Log in</a>
-    <div id="remember-container">
-      <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>
-      <span id="remember">Remember me</span>
-      <span id="forgotten">Forgotten password</span>
+            </div>
+        </div>
     </div>
-</form>
-</div>
-
-<!-- Forgotten Password Container -->
-<div id="forgotten-container">
-   <h1>Forgot Password</h1>
-  <span class="close-btn">
-    <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
-  </span>
-
-  <form>
-    <input type="email" name="email" placeholder="E-mail">
-    <a href="#" class="orange-btn">Get new password</a>
-</form>
 </div>
