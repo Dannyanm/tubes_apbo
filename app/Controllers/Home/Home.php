@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Home;
+
+use App\Controllers\BaseController;
 
 class Home extends BaseController
 {
@@ -12,8 +14,6 @@ class Home extends BaseController
         $data = [
             'title' => 'Home | Dadang Cornering'
         ];
-        echo view('/home/header', $data);
-        echo view('/home/index');
-        echo view('/home/header');
+        echo view('/home/pages/index', $data);
     }
 }

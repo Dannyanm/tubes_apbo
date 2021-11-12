@@ -12,9 +12,7 @@ class Admin extends BaseController{
             'title' => 'Home Admin',
             'user_status' => 'Admin'
         ];
-        echo view('admin/header', $data);
-        echo view('admin/pages/home');
-        echo view('admin/footer');
+        echo view('admin/pages/home', $data);
     }
     
     public function booking()
@@ -23,9 +21,7 @@ class Admin extends BaseController{
             'title' => 'Data Booking',
             'user_status' => 'Admin'
         ];
-        echo view('admin/header', $data);
-        echo view('admin/pages/booking');
-        echo view('admin/footer');
+        echo view('admin/pages/booking', $data);
     }
     
     public function mekanik()
@@ -34,9 +30,7 @@ class Admin extends BaseController{
             'title' => 'Data Mekanik',
             'user_status' => 'Admin'
         ];
-        echo view('admin/header', $data);
-        echo view('admin/pages/mekanik');
-        echo view('admin/footer');
+        echo view('admin/pages/mekanik', $data);
     }
     
     public function member()
@@ -45,9 +39,7 @@ class Admin extends BaseController{
             'title' => 'Data Member',
             'user_status' => 'Admin'
         ];
-        echo view('admin/header', $data);
-        echo view('admin/pages/member');
-        echo view('admin/footer');
+        echo view('admin/pages/member', $data);
     }
 
     public function pembayaran()
@@ -56,9 +48,7 @@ class Admin extends BaseController{
             'title' => 'Data Pembayaran',
             'user_status' => 'Admin'
         ];
-        echo view('admin/header', $data);
-        echo view('admin/pages/pembayaran');
-        echo view('admin/footer');
+        echo view('admin/pages/pembayaran', $data);
     }
 
     public function penjualan()
@@ -67,9 +57,7 @@ class Admin extends BaseController{
             'title' => 'Data Penjualan',
             'user_status' => 'Admin'
         ];
-        echo view('admin/header', $data);
-        echo view('admin/pages/penjualan');
-        echo view('admin/footer');
+        echo view('admin/pages/penjualan', $data);
     }
 
     public function service()
@@ -78,9 +66,7 @@ class Admin extends BaseController{
             'title' => 'Data Service',
             'user_status' => 'Admin'
         ];
-        echo view('admin/header', $data);
-        echo view('admin/pages/service');
-        echo view('admin/footer');
+        echo view('admin/pages/service', $data);
     }
 
     // data barang diganti jadi spareparts
@@ -90,9 +76,7 @@ class Admin extends BaseController{
             'title' => 'Data Spareparts',
             'user_status' => 'Admin'
         ];
-        echo view('admin/header', $data);
-        echo view('admin/pages/spareparts');
-        echo view('admin/footer');
+        echo view('admin/pages/spareparts', $data);
     }
     
 }

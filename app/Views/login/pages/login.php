@@ -1,3 +1,6 @@
+<?= $this->extend('login/layout/template'); ?>
+
+<?= $this->section('content'); ?>
 <div class="form">
     <div class="form__box">
         <div class="form__left">
@@ -25,3 +28,5 @@
         </div>
     </div>
 </div>
+
+<?= $this->endSection('content'); ?>

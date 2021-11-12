@@ -18,7 +18,7 @@
     <!-- javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+    
     <title><?= $title; ?></title>
 </head>
 <body>
@@ -26,14 +26,18 @@
 <div class="d-flex" id="wrapper">
     <!-- sidebar -->
     <div class="border-end bg-white" id="sidebar-wrapper">
-        <div class="sidebar-heading border-bottom bg-light">
+    <div class="sidebar-heading border-bottom bg-light">
             <a href="<?= base_url('/');?>">Dadang Cornering</a>
         </div>
         <div class="list-group list-group-flush">
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer');?>">Home</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/booking');?>">Booking Service</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/pembayaran');?>">Pembayaran</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/customer/spareparts');?>">Spareparts</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin');?>">Home</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/booking');?>">Data Booking</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/mekanik');?>">Data Mekanik</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/member');?>">Data Member</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/pembayaran');?>">Data Pembayaran</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/penjualan');?>">Data Penjualan</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/service');?>">Data Service</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/spareparts');?>">Data Spareparts</a>
         </div>
     </div>
 
@@ -45,9 +49,9 @@
                 <button class="btn btn-primary" id="sidebarToggle">///</button>
 
                 <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="collapse-toggler-icon"></span>
+                    <span class="collapse-toggler-icon"><?= $user_status; ?></span>
                 </button> -->
-
+                
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $user_status; ?></a>
                     <div class="dropdown-menu dropdown-menu-end pr-8" aria-labelledby="navbarDropdown">
@@ -61,3 +65,19 @@
         </nav>
 
         <div class="container-fluid p-3">
+
+        <?= $this->renderSection('content'); ?>
+
+        </div>
+    </div>
+</div>
+
+<!-- offline js -->
+<script src="../../bootstrap-5.1.3-dist/js/dadangcor.js"></script>
+
+<!-- online js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+
+</body>
+</html>

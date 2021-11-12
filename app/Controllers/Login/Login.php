@@ -11,9 +11,7 @@ class Login extends BaseController{
         $data = [
             'title' => 'Login'
         ];
-        echo view('login/header', $data);
-        echo view('login/pages/login');
-        echo view('login/footer');
+        echo view('login/pages/login', $data);
     }
 }
 ?>

@@ -10,11 +10,10 @@ class Customer extends BaseController{
     {
         $data = [
             'title' => 'Home Customer',
-            'user_status' => 'Customer'
+            'user_status' => 'Customer',
+            'test' => ['budi','santoso','sarkem']
         ];
-        echo view('customer/header', $data);
-        echo view('customer/pages/home');
-        echo view('customer/footer');
+        echo view('customer/pages/home', $data);
     }
 
     public function booking()
@@ -23,9 +22,7 @@ class Customer extends BaseController{
             'title' => 'Booking Service',
             'user_status' => 'Customer'
         ];
-        echo view('customer/header', $data);
-        echo view('customer/pages/booking');
-        echo view('customer/footer');
+        echo view('customer/pages/booking', $data);
     }
 
     public function pembayaran()
@@ -34,9 +31,7 @@ class Customer extends BaseController{
             'title' => 'Pembayaran',
             'user_status' => 'Customer'
         ];
-        echo view('customer/header', $data);
-        echo view('customer/pages/pembayaran');
-        echo view('customer/footer');
+        echo view('customer/pages/pembayaran', $data);
     }
 
     public function spareparts()
@@ -45,9 +40,7 @@ class Customer extends BaseController{
             'title' => 'Spareparts',
             'user_status' => 'Customer'
         ];
-        echo view('customer/header', $data);
-        echo view('customer/pages/spareparts');
-        echo view('customer/footer');
+        echo view('customer/pages/spareparts', $data);
     }
 
     public function registration()
@@ -56,9 +49,7 @@ class Customer extends BaseController{
             'title' => 'Registrasi Customer',
             'user_status' => 'Customer'
         ];
-        echo view('customer/header', $data);
-        echo view('customer/pages/registration');
-        echo view('customer/footer');
+        echo view('customer/pages/registration', $data);
     }
 
     public function change_password()
@@ -67,9 +58,7 @@ class Customer extends BaseController{
             'title' => 'Change Password',
             'user_status' => 'Customer'
         ];
-        echo view('customer/header', $data);
-        echo view('customer/pages/change_password');
-        echo view('customer/footer');
+        echo view('customer/pages/change_password', $data);
     }
 
     public function profil()
@@ -78,9 +67,7 @@ class Customer extends BaseController{
             'title' => 'Profil',
             'user_status' => 'Customer'
         ];
-        echo view('customer/header', $data);
-        echo view('customer/pages/profil');
-        echo view('customer/footer');
+        echo view('customer/pages/profil', $data);
     }
 
 }
