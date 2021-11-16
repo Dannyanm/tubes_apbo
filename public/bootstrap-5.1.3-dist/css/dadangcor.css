@@ -15,41 +15,97 @@ a:active {
     color: black;
 }
 
+.navbar{
+    background-color: #52734D;
+    color: #F8EDE3;
+}
+
+.user-option {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #D5EEBB;
+    color: #D5EEBB;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.user-option:hover, .user-option:focus {
+    color: #D5EEBB;
+}
+
+.button-toggler {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button-toggler-primary {
+    color: #52734D;
+    background-color: #D5EEBB;
+    border-color: #D5EEBB;
+}
+
 #sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;
     transition: margin 0.25s ease-out;
-  }
+    background-color: #52734D;
+    
+}
   
-  #sidebar-wrapper .sidebar-heading {
+#sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
     font-size: 1.2rem;
-  }
+    background-color: #BFD8B8;
+    text-align: center;
+}
   
-  #sidebar-wrapper .list-group {
+#sidebar-wrapper .list-group {
     width: 15rem;
-  }
-  
-  #page-content-wrapper {
+    transition: .4s;
+    background-color: #52734D;
+    color: #F8EDE3;
+}
+
+#sidebar-wrapper .list-group:hover {
+    background-color: #F8EDE3;
+    color: #52734D;
+}
+
+#page-content-wrapper {
     min-width: 100vw;
-  }
+}
   
-  body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: 0;
-  }
+}
   
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     #sidebar-wrapper {
-      margin-left: 0;
+        margin-left: 0;
     }
   
     #page-content-wrapper {
-      min-width: 0;
-      width: 100%;
+        min-width: 0;
+        width: 100%;
     }
   
     body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
-      margin-left: -15rem;
+        margin-left: -15rem;
     }
-  }
+}
 
