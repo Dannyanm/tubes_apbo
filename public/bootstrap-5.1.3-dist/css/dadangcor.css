@@ -5,8 +5,6 @@ body{
     
 }
 
-/* need to fix here 
-refers link at header text "Dadang Cornering" */
 a:link,
 a:visited,
 a:hover,
@@ -15,6 +13,7 @@ a:active {
     color: black;
 }
 
+/* INI UNTUK MENGUBAH YANG ADA DI NAVBAR */
 .navbar{
     background-color: #52734D;
     color: #F8EDE3;
@@ -59,6 +58,7 @@ a:active {
     border-color: #D5EEBB;
 }
 
+/* INI UNTUK MENGUBAH YANG ADA DI SIDEBAR */
 #sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;
