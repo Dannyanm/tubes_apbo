@@ -38,19 +38,50 @@ $routes->get('/', 'Home\Home::index');
 // routes admin
 $routes->get('/admin', 'Admin\Admin::index');
 // $routes->get('/admin/(:segment)', 'Admin\Admin::$1');
-// $routes->get('/admin/pages/(:segment)', 'Admin\Admin::$1');
-$routes->get('/admin/(:segment)', 'Admin\Admin::$1');
 
 // routes customer
 $routes->get('/customer', 'Customer\Customer::index');
-// $routes->get('/customer/(:segment)', 'Customer\Customer::$1');
-// $routes->get('/customer/pages/(:segment)', 'Customer\Customer::$1');
 $routes->get('/customer/(:segment)', 'Customer\Customer::$1');
 
 //routes login
 $routes->get('/login', 'Login\Login::index');
 $routes->get('/login/pages/(:segment)', 'Login\Login::$1');
+
+// routes spareparts admin
+$routes->get('/admin/spareparts', 'Admin\Spareparts\Spareparts::index');
+$routes->get('/admin/spareparts/(:segment)', 'Admin\Spareparts\Spareparts::$1');
+
+// routes booking admin
+$routes->get('/admin/booking', 'Admin\Booking\Booking::index');
+
+// routes mekanik admin
+$routes->get('/admin/mekanik', 'Admin\Mekanik\Mekanik::index');
+
+// routes member admin
+$routes->get('/admin/member', 'Admin\Member\Member::index');
+
+// routes pembayaran admin
+$routes->get('/admin/pembayaran', 'Admin\Pembayaran\Pembayaran::index');
+
+// routes penjualan admin
+$routes->get('/admin/penjualan', 'Admin\Penjualan\Penjualan::index');
+
+// routes service admin
+$routes->get('/admin/service', 'Admin\Service\Service::index');
+
+
+
+
+
+
+
+
+
+
+
+
 /*
+
 
 Placeholders are simply strings that represent a Regular Expression pattern. During the routing process, these placeholders are replaced with the value of the Regular Expression. They are primarily used for readability.
 
