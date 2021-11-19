@@ -117,6 +117,16 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     vertical-align: middle;
 }
 
+.text-white{
+    color: white;
+}
+
+.bg-home {
+    /* background-image: url("https://images.pexels.com/photos/4424012/pexels-photo-4424012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 
 

@@ -2,6 +2,6 @@
 
 <?= $this->section('content'); ?>
 
-<h1>This is booking Page</h1>
+<h1>Halaman Transaksi</h1>
 
 <?= $this->endSection(); ?>

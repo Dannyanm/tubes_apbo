@@ -2,6 +2,6 @@
 
 <?= $this->section('content'); ?>
 
-<h1>This is Service Page</h1>
+<h1>Halaman Member</h1>
 
 <?= $this->endSection(); ?>

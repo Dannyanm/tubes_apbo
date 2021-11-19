@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<h1>This is Sparepart Page folder sendiri</h1>
+<h1>Data Spareparts</h1>
 
 <div class="card" style="width: 18rem;">
   <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->

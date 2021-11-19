@@ -2,6 +2,6 @@
 
 <?= $this->section('content'); ?>
 
-<h1>This is Penjualan Page</h1>
+<h1>Halaman Service</h1>
 
 <?= $this->endSection(); ?>

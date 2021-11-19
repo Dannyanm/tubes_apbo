@@ -12,7 +12,7 @@ class Spareparts extends BaseController{
             'title' => 'Data Spareparts',
             'user_status' => 'Admin'
         ];
-        echo view('admin/pages/spareparts/spareparts', $data);
+        echo view('admin/pages/spareparts/index', $data);
     }
 
     public function detail()

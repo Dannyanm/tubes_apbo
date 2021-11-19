@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<div class="p-5" style="text-align:center">
+<div class="p-5 text-center">
 
     <h1>SELAMAT DATANG DI BENGKEL DADANG CORNERING</h1>
 
@@ -13,7 +13,6 @@
     <a href="<?= base_url('/login'); ?>">Ke Halaman Login</a>
 
 </div>
-
 <?= $this->endSection(); ?>
 
 

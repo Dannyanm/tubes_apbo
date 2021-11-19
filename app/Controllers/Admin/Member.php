@@ -12,7 +12,7 @@ class Member extends BaseController{
             'title' => 'Data Member',
             'user_status' => 'Admin'
         ];
-        echo view('admin/pages/member/member', $data);
+        echo view('admin/pages/member/index', $data);
     }
     
 }

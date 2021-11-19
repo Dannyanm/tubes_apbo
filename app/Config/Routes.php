@@ -35,49 +35,43 @@ $routes->setAutoRoute(true);
 // routes home
 $routes->get('/', 'Home\Home::index');
 
-// routes admin
-$routes->get('/admin', 'Admin\Admin::index');
-// $routes->get('/admin/(:segment)', 'Admin\Admin::$1');
-
-// routes customer
-$routes->get('/customer', 'Customer\Customer::index');
-$routes->get('/customer/(:segment)', 'Customer\Customer::$1');
 
 //routes login
 $routes->get('/login', 'Login\Login::index');
 $routes->get('/login/pages/(:segment)', 'Login\Login::$1');
 
-// routes spareparts admin
-$routes->get('/admin/spareparts', 'Admin\Spareparts::index');
-$routes->get('/admin/spareparts/(:segment)', 'Admin\Spareparts::$1');
-
-// routes booking admin
-$routes->get('/admin/booking', 'Admin\Booking::index');
+// routes admin
+$routes->get('/admin', 'Admin\Admin::index');
 
 // routes mekanik admin
 $routes->get('/admin/mekanik', 'Admin\Mekanik::index');
-$routes->get('/admin/mekanik/(:segment)', 'Admin\Mekanik::$1');
-$routes->get('/admin/mekanik/(:segment)/(:segment)', 'Admin\Mekanik::$1/$2');
+$routes->get('/admin/mekanik/(:alpha)', 'Admin\Mekanik::$1');
+$routes->get('/admin/mekanik/(:num)', 'Admin\Mekanik::detail/$1');
 
 // routes member admin
 $routes->get('/admin/member', 'Admin\Member::index');
 
-// routes pembayaran admin
-$routes->get('/admin/pembayaran', 'Admin\Pembayaran::index');
-
-// routes penjualan admin
-$routes->get('/admin/penjualan', 'Admin\Penjualan::index');
-
 // routes service admin
 $routes->get('/admin/service', 'Admin\Service::index');
 
+// routes spareparts admin
+$routes->get('/admin/spareparts', 'Admin\Spareparts::index');
+$routes->get('/admin/spareparts/(:segment)', 'Admin\Spareparts::$1');
 
+// routes transaksi admin
+$routes->get('/admin/transaksi', 'Admin\Transaksi::index');
 
+// routes customer
+$routes->get('/customer', 'Customer\Customer::index');
 
+// routes booking customer
+$routes->get('/customer/booking', 'Customer\Booking::index');
 
+// routes pembayaran customer
+$routes->get('/customer/pembayaran', 'Customer\Pembayaran::index');
 
-
-
+// routes spareparts customer
+$routes->get('/customer/spareparts', 'Customer\Spareparts::index');
 
 
 

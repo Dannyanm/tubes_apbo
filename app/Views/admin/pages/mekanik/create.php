@@ -9,15 +9,19 @@
 <form method="post" action="/admin/mekanik/save">
     <?= csrf_field() ?>
     <div class="my-2">
-        <label for="nama" class="form-label">Nama</label>
-        <input type="text" class ="form-control" name="nama" />
+        <label for="nama_mekanik" class="form-label">Nama</label>
+        <input type="text" class ="form-control" name="nama_mekanik" />
     </div>
     <div class="my-2">
         <label for="alamat" class="form-label">Alamat</label>
         <input type="text" class ="form-control" name="alamat">
     </div>
+    <div class="my-2">
+        <label for="no_hp" class="form-label">No. Handphone</label>
+        <input type="text" class ="form-control" name="no_hp">
+    </div>
     <div>
-        <input type="submit" name="submit" value="Submit" class="btn btn-primary"/>
+        <input type="submit" value="Submit" class="btn btn-primary"/>
     </div>
 </form>
 </div>

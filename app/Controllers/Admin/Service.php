@@ -12,8 +12,10 @@ class Service extends BaseController{
             'title' => 'Data Service',
             'user_status' => 'Admin'
         ];
-        echo view('admin/pages/service/service', $data);
+        echo view('admin/pages/service/index', $data);
     }
+
+    
     
 }
 
