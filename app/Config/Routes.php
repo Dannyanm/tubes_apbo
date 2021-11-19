@@ -48,26 +48,28 @@ $routes->get('/login', 'Login\Login::index');
 $routes->get('/login/pages/(:segment)', 'Login\Login::$1');
 
 // routes spareparts admin
-$routes->get('/admin/spareparts', 'Admin\Spareparts\Spareparts::index');
-$routes->get('/admin/spareparts/(:segment)', 'Admin\Spareparts\Spareparts::$1');
+$routes->get('/admin/spareparts', 'Admin\Spareparts::index');
+$routes->get('/admin/spareparts/(:segment)', 'Admin\Spareparts::$1');
 
 // routes booking admin
-$routes->get('/admin/booking', 'Admin\Booking\Booking::index');
+$routes->get('/admin/booking', 'Admin\Booking::index');
 
 // routes mekanik admin
-$routes->get('/admin/mekanik', 'Admin\Mekanik\Mekanik::index');
+$routes->get('/admin/mekanik', 'Admin\Mekanik::index');
+$routes->get('/admin/mekanik/(:segment)', 'Admin\Mekanik::$1');
+$routes->get('/admin/mekanik/(:segment)/(:segment)', 'Admin\Mekanik::$1/$2');
 
 // routes member admin
-$routes->get('/admin/member', 'Admin\Member\Member::index');
+$routes->get('/admin/member', 'Admin\Member::index');
 
 // routes pembayaran admin
-$routes->get('/admin/pembayaran', 'Admin\Pembayaran\Pembayaran::index');
+$routes->get('/admin/pembayaran', 'Admin\Pembayaran::index');
 
 // routes penjualan admin
-$routes->get('/admin/penjualan', 'Admin\Penjualan\Penjualan::index');
+$routes->get('/admin/penjualan', 'Admin\Penjualan::index');
 
 // routes service admin
-$routes->get('/admin/service', 'Admin\Service\Service::index');
+$routes->get('/admin/service', 'Admin\Service::index');
 
 
 

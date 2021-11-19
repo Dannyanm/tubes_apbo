@@ -9,7 +9,7 @@
   <div class="card-body">
     <h5 class="card-title"><b>Pelumas</b></h5>
     <p class="card-text">Daftar harga pelumas dengan harga terbaik!</p>
-    <a href="<?= base_url('/admin/spareparts/detail');?>" class="btn btn-primary">Cek disini!</a>
+    <a href="<?= base_url('/admin/spareparts/detail');?>" class="button-toggler button-toggler-primary">Cek disini!</a>
   </div>
 </div>
 

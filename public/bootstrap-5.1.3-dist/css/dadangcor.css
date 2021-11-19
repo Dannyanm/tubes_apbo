@@ -30,6 +30,7 @@ a:active {
 
 .user-option:hover, .user-option:focus {
     color: #D5EEBB;
+    background-color: #52734D;
 }
 
 .button-toggler {
@@ -108,4 +109,14 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
         margin-left: -15rem;
     }
 }
+
+/* INI UNTUK MENGUBAH CSS YANG ADA DI CONTENT */
+
+.text-center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
 

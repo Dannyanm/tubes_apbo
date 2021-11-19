@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Admin\Mekanik;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Models\MekanikModel;
@@ -22,9 +22,24 @@ class Mekanik extends BaseController{
             'user_status' => 'Admin',
             'mekanik' => $mekanik
         ];
+        echo view('admin/pages/mekanik/index', $data);
+    }
 
+    public function create()
+    {
+        $data = [
+            'title' => 'Tambah Data',
+            'user_status' => 'Admin',
+        ];
 
-        echo view('admin/pages/mekanik/mekanik', $data);
+        $model = model(MekanikModel::class);
+
+        echo view('admin/pages/mekanik/create', $data);
+    }
+
+    public function save()
+    {
+        d($this->request->getVar());
     }
     
 }
