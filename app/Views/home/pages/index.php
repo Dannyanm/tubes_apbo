@@ -10,7 +10,9 @@
     ||
     <a href="<?= base_url('/customer'); ?>">Ke Halaman Customer</a>
     ||
-    <a href="<?= base_url('/login'); ?>">Ke Halaman Login</a>
+    <a href="<?= base_url('/customer/login'); ?>">Ke Halaman Login Member</a>
+    ||
+    <a href="<?= base_url('/admin/login'); ?>">Ke Halaman Login Admin</a>
 
 </div>
 <?= $this->endSection(); ?>

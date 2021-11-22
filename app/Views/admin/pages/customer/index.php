@@ -2,6 +2,8 @@
 
 <?= $this->section('content'); ?>
 
-<h1>Halaman Member</h1>
+<h1>Data Customer</h1>
+
+
 
 <?= $this->endSection(); ?>

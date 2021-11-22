@@ -23,10 +23,10 @@
                 </button> -->
 
                 <div class="nav-item dropdown">
-                    <a class="user-option dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $user_status; ?></a>
+                    <a class="user-option dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Customer</a>
                     <div class="dropdown-menu dropdown-menu-end pr-8" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?= base_url('/customer/profil');?>">Profil</a>
-                        <a class="dropdown-item" href="#!">Logout</a>
+                        <a class="dropdown-item" href="<?= base_url('/customer/logout');?>">Logout</a>
                             <!-- <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#!" disabled>Something else here</a> 
                             </div>  -->

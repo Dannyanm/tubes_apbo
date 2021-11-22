@@ -43,13 +43,20 @@ $routes->get('/login/pages/(:segment)', 'Login\Login::$1');
 // routes admin
 $routes->get('/admin', 'Admin\Admin::index');
 
+// routes login admin
+$routes->get('/admin/login', 'Admin\Login::index');
+
 // routes mekanik admin
 $routes->get('/admin/mekanik', 'Admin\Mekanik::index');
-$routes->get('/admin/mekanik/(:alpha)', 'Admin\Mekanik::$1');
-$routes->get('/admin/mekanik/(:num)', 'Admin\Mekanik::detail/$1');
+$routes->delete('/admin/mekanik/(:num)', 'Admin\Mekanik::delete/$1');
+$routes->get('/admin/mekanik/create', 'Admin\Mekanik::create');
+$routes->get('/admin/mekanik/edit/(:num)', 'Admin\Mekanik::edit/$1');
+$routes->get('/admin/mekanik/update/(:num)', 'Admin\Mekanik::update/$1');
+// $routes->get('/admin/mekanik/(:alpha)', 'Admin\Mekanik::$1');
+$routes->get('/admin/mekanik/(:any)', 'Admin\Mekanik::detail/$1');
 
-// routes member admin
-$routes->get('/admin/member', 'Admin\Member::index');
+// routes customer admin
+$routes->get('/admin/customer', 'Admin\Customer::index');
 
 // routes service admin
 $routes->get('/admin/service', 'Admin\Service::index');
@@ -63,6 +70,11 @@ $routes->get('/admin/transaksi', 'Admin\Transaksi::index');
 
 // routes customer
 $routes->get('/customer', 'Customer\Customer::index');
+
+// routes login customer
+$routes->get('/customer/login', 'Customer\Login::index');
+$routes->get('/customer/login/login', 'Customer\Login::login');
+$routes->get('/customer/logout', 'Customer\Login::logout');
 
 // routes booking customer
 $routes->get('/customer/booking', 'Customer\Booking::index');

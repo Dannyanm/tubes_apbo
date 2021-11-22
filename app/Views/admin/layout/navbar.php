@@ -7,7 +7,7 @@
         <div class="list-group list-group-flush">
             <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin');?>">Home</a>
             <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/mekanik');?>">Data Mekanik</a>
-            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/member');?>">Data Member</a>
+            <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/customer');?>">Data Customer</a>
             <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/service');?>">Data Service</a>
             <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/spareparts');?>">Data Spareparts</a>
             <a class="list-group-item list-group-item-action list-group item-light p-3" href="<?= base_url('/admin/transaksi');?>">Data Transaksi</a>

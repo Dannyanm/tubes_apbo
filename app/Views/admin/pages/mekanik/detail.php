@@ -11,6 +11,14 @@
     <p class="card-text"><?= $mekanik['alamat']; ?></p>
     <p class="card-text"><?= $mekanik['no_hp']; ?></p>
   </div>
+    <a href="/admin/mekanik/edit/<?= $mekanik['id']; ?>" class="btn btn-warning">Edit</a>
+
+    <form action="/admin/mekanik/<?= $mekanik['id']; ?>" method="post">
+        <?= csrf_field(); ?>
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')">Delete</button>
+    </form>
+
 </div>
 
 

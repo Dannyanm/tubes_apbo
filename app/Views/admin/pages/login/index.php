@@ -13,7 +13,7 @@
         <div class="form__right">
             <div class="form__padding-right">
                 <form>
-                    <h1 class="form__title" id="judulForm">Member Login</h1>
+                    <h1 class="form__title" id="judulForm">Admin Login</h1>
                     <input class="form__email" type="text" placeholder="Email" />
                     <input class="form__password" type="text" placeholder="******" />
                     <input class="form__submit-btn" type="submit" value="Login"/>

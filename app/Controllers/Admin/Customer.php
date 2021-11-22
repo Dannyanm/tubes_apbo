@@ -4,7 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
-class Member extends BaseController{
+class Customer extends BaseController{
 
     public function index()
     {
@@ -12,7 +12,7 @@ class Member extends BaseController{
             'title' => 'Data Member',
             'user_status' => 'Admin'
         ];
-        echo view('admin/pages/member/index', $data);
+        echo view('admin/pages/customer/index', $data);
     }
     
 }
