@@ -3,7 +3,6 @@
 namespace App\Controllers\Customer;
 
 use App\Controllers\BaseController;
-use App\Models\LoginCustomerModel;
 
 class Login extends BaseController{
 
@@ -11,10 +10,7 @@ class Login extends BaseController{
 
     public function __construct()
     {
-        // $this->db = new LoginCustomerModel();
-        // $db = \Config\Database::connect();
-
-        // $this->db = new LoginCustomerModel();
+        
     }
 
     public function index()
@@ -23,7 +19,7 @@ class Login extends BaseController{
             'title' => 'Login'
         ];
 
-        if(session('id_customer')){
+        if(session('id')){
             return redirect()->to(base_url('/customer'));
         }
 
@@ -42,23 +38,27 @@ class Login extends BaseController{
         // $hashPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $user = $query->getRow();
 
+        // d($hashPassword);
+        // d($query);
+        // dd(password_verify($post['password'], $user->password));
+
         if($user) {
             if(password_verify($post['password'], $user->password)) {
-                $params = ['id_customer' => $user->id_customer];
+                $params = ['id' => $user->id];
                 session()->set($params);
                 return redirect()->to(base_url('/customer'));
                 
             } else {
-                return redirect()->to(base_url('/customer/login'))->with('message', 'Password salah!');
+                return redirect()->to(base_url('/customer/login'))->with('message_error', 'Password salah!');
             }
         } else {
-            return redirect()->to(base_url('/customer/login'))->with('message', 'Username tidak ditemukan');
+            return redirect()->to(base_url('/customer/login'))->with('message_error', 'Username tidak ditemukan!');
         }
     }
 
     public function logout()
     {
-        session()->remove('id_customer');
+        session()->remove('id');
         return redirect()->to(base_url('/customer/login'));
     }
 }

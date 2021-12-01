@@ -6,7 +6,8 @@ use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
-use App\Filters\LoginFilter;
+use App\Filters\LoginCustomerFilter;
+use App\Filters\LoginAdminFilter;
 
 class Filters extends BaseConfig
 {
@@ -20,7 +21,8 @@ class Filters extends BaseConfig
         'csrf'     => CSRF::class,
         'toolbar'  => DebugToolbar::class,
         'honeypot' => Honeypot::class,
-        'isLoggedIn' => LoginFilter::class,
+        'isLoggedIn' => LoginCustomerFilter::class,
+        'isLoggedIn' => LoginAdminFilter::class,
     ];
 
     /**
@@ -69,6 +71,12 @@ class Filters extends BaseConfig
                 'customer/booking/*',
                 'customer/pembayaran/*',
                 'customer/spareparts/*',
+                'admin',
+                'admin/mekanik',
+                'admin/customer',
+                'admin/service',
+                'admin/spareparts',
+                'admin/transaksi',
             ]
         ]
     ];

@@ -1,32 +1,47 @@
-<?= $this->extend('login/layout/template'); ?>
+<?= $this->extend('admin/layout/template_login'); ?>
 
 <?= $this->section('content'); ?>
-<div class="form">
-    <div class="form__box">
-        <div class="form__left">
-            <div class="form__padding">
-                
-                <img class="form__image" src="https://i.pinimg.com/originals/8b/44/51/8b4451665d6b2139e29f29b51ffb1829.png" />
-                
-            </div>
-        </div>
-        <div class="form__right">
-            <div class="form__padding-right">
-                <form>
-                    <h1 class="form__title" id="judulForm">Admin Login</h1>
-                    <input class="form__email" type="text" placeholder="Email" />
-                    <input class="form__password" type="text" placeholder="******" />
-                    <input class="form__submit-btn" type="submit" value="Login"/>
-                </form>
-                <span>Forgot 
-                    <a class="form__link" href="#">Username</a><a> / </a>
-                    <a class="form__link" href="#">Password</a></span>
-                <p> <a class="form__link" href="#">Create your account</a></p>
-                <p> <a class="form__link" href="<?= base_url('/'); ?>">Kembali Ke Homepage</a></p>
 
-            </div>
+<div class="px-5 py-5">
+
+    <?php if(session()->getFlashdata('message_error')) : ?>
+        
+        <div class="alert alert-danger" role="alert">
+            <?= session()->getFlashdata('message_error');?>
         </div>
-    </div>
+    
+    <?php endif; ?>
+
+    <?php if(session()->getFlashdata('message_success')) : ?>
+        
+        <div class="alert alert-success" role="alert">
+            <?= session()->getFlashdata('message_success');?>
+        </div>
+    
+    <?php endif; ?>
+
+    <form method="post" action="login/login" class="py-2">
+        <?= csrf_field(); ?>
+        
+        <div class="my-2">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class ="form-control" name="username" required/>
+        </div>
+        <div class="my-2">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class ="form-control" name="password" required/>
+        </div>
+        
+        <!-- <div>
+            <input type="submit" value="Login" class="btn btn-primary"/>
+        </div> -->
+        <div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+
+
+    
 </div>
 
 <?= $this->endSection('content'); ?>

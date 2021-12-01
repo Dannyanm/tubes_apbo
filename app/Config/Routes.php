@@ -35,7 +35,6 @@ $routes->setAutoRoute(true);
 // routes home
 $routes->get('/', 'Home\Home::index');
 
-
 //routes login
 $routes->get('/login', 'Login\Login::index');
 $routes->get('/login/pages/(:segment)', 'Login\Login::$1');
@@ -45,6 +44,8 @@ $routes->get('/admin', 'Admin\Admin::index');
 
 // routes login admin
 $routes->get('/admin/login', 'Admin\Login::index');
+$routes->get('/admin/login/login', 'Admin\Login::login');
+$routes->get('/admin/logout', 'Admin\Login::logout');
 
 // routes mekanik admin
 $routes->get('/admin/mekanik', 'Admin\Mekanik::index');
@@ -75,6 +76,10 @@ $routes->get('/customer', 'Customer\Customer::index');
 $routes->get('/customer/login', 'Customer\Login::index');
 $routes->get('/customer/login/login', 'Customer\Login::login');
 $routes->get('/customer/logout', 'Customer\Login::logout');
+
+// routes register customer
+$routes->get('/customer/registercustomer', 'Customer\RegisterCustomer::index');
+$routes->get('/customer/registercustomer/register', 'Customer\RegisterCustomer::register');
 
 // routes booking customer
 $routes->get('/customer/booking', 'Customer\Booking::index');

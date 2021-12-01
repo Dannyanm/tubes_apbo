@@ -4,15 +4,23 @@
 
 <div class="px-5 py-5">
 
-    <?php if(session()->getFlashdata('message')) : ?>
+    <?php if(session()->getFlashdata('message_error')) : ?>
         
         <div class="alert alert-danger" role="alert">
-            <?= session()->getFlashdata('message');?>
+            <?= session()->getFlashdata('message_error');?>
         </div>
     
     <?php endif; ?>
 
-    <form method="post" action="login/login">
+    <?php if(session()->getFlashdata('message_success')) : ?>
+        
+        <div class="alert alert-success" role="alert">
+            <?= session()->getFlashdata('message_success');?>
+        </div>
+    
+    <?php endif; ?>
+
+    <form method="post" action="login/login" class="py-2">
         <?= csrf_field(); ?>
         
         <div class="my-2">
@@ -31,6 +39,10 @@
             <button type="submit" class="btn btn-primary">Login</button>
         </div>
     </form>
+
+    <a href="<?= base_url('/customer/registercustomer');?>">Belum memiliki akun? Register sekarang!</a>
+
+    
 </div>
 
 <?= $this->endSection('content'); ?>

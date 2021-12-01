@@ -6,7 +6,7 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class LoginFilter implements FilterInterface
+class LoginCustomerFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
@@ -15,7 +15,7 @@ class LoginFilter implements FilterInterface
         //     return redirect()->to(base_url('/customer/login'));
         // } 
     
-        if(!session('id_customer')){
+        if(!session('id')){
             return redirect()->to(base_url('/customer/login'));
         }
     }
