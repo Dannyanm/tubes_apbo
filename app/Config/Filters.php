@@ -21,8 +21,8 @@ class Filters extends BaseConfig
         'csrf'     => CSRF::class,
         'toolbar'  => DebugToolbar::class,
         'honeypot' => Honeypot::class,
-        'isLoggedIn' => LoginCustomerFilter::class,
-        'isLoggedIn' => LoginAdminFilter::class,
+        'customerIsLoggedIn' => LoginCustomerFilter::class,
+        'adminIsLoggedIn' => LoginAdminFilter::class,
     ];
 
     /**
@@ -65,19 +65,23 @@ class Filters extends BaseConfig
      * @var array
      */
     public $filters = [
-        'isLoggedIn' => ['before' =>
+        'customerIsLoggedIn' => ['before' =>
             [
                 'customer',
                 'customer/booking/*',
                 'customer/pembayaran/*',
                 'customer/spareparts/*',
-                'admin',
-                'admin/mekanik',
-                'admin/customer',
-                'admin/service',
-                'admin/spareparts',
-                'admin/transaksi',
             ]
-        ]
+        ],
+        'adminIsLoggedIn' => ['before' =>
+            [   
+                'admin',
+                'admin/mekanik/*',
+                'admin/customer/*',
+                'admin/service/*',
+                'admin/spareparts/*',
+                'admin/transaksi/*',
+            ]
+        ],
     ];
 }
