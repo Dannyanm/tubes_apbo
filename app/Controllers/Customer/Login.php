@@ -41,13 +41,14 @@ class Login extends BaseController{
         // d($hashPassword);
         // d($query);
         // dd(password_verify($post['password'], $user->password));
+        // dd($user);
 
         if($user) {
             if(password_verify($post['password'], $user->password)) {
-                $params = ['id' => $user->id];
+                $params = ['id' => $user->id,
+                            'nama_customer' => $user->nama_customer];
                 session()->set($params);
                 return redirect()->to(base_url('/customer'));
-                
             } else {
                 return redirect()->to(base_url('/customer/login'))->with('message_error', 'Password salah!');
             }

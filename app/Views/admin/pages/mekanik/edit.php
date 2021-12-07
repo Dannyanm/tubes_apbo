@@ -1,7 +1,7 @@
 <?= $this->extend('admin/layout/template'); ?>
 
 <?= $this->section('content'); ?>
-
+<main>
 <h2>Edit Data Mekanik</h2>
 
 <div>
@@ -35,5 +35,6 @@
     </div>
 </form>
 </div>
+</main>
 
 <?= $this->endSection(); ?>

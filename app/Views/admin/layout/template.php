@@ -10,7 +10,8 @@
     
     <!-- offline bootstrap -->
     <link rel="stylesheet" href="../../../bootstrap-5.1.3-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../../../bootstrap-5.1.3-dist/css/dadangcor.css">
+    <!-- <link rel="stylesheet" href="../../../bootstrap-5.1.3-dist/css/dadangcor.css"> -->
+    <link rel="stylesheet" href="../../../bootstrap-5.1.3-dist/css/dadangcors.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
@@ -23,17 +24,10 @@
 </head>
 <body>
 
-<div class="d-flex" id="wrapper">
+    <?= $this->include('admin/layout/navbars'); ?>
+    <?= $this->renderSection('content'); ?>
+<!-- <div class="d-flex" id="wrapper"> -->
 
-        <?= $this->include('admin/layout/navbar'); ?>
-
-        <div class="container-fluid p-3">
-
-        <?= $this->renderSection('content'); ?>
-
-        </div>
-    </div>
-</div>
 
 <!-- offline js -->
 <script src="../../../bootstrap-5.1.3-dist/js/dadangcor.js"></script>

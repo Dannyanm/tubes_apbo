@@ -2,6 +2,8 @@
 
 <?= $this->section('content'); ?>
 
-<h1>Home Page Customer</h1>
+<main>
+<h1>Profil Customer</h1>
+</main>
 
 <?= $this->endSection(); ?>

@@ -14,6 +14,10 @@ class LoginCustomerFilter implements FilterInterface
         // if(!$auth->isLoggedIn()){
         //     return redirect()->to(base_url('/customer/login'));
         // } 
+        // $nama_customer = $this->db->getVar('nama_customer');
+        // return dd($nama_customer);
+
+        // return dd('id');
     
         if(!session('id')){
             return redirect()->to(base_url('/customer/login'));

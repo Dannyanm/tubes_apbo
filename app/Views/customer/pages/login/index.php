@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<div class="px-5 py-5">
+<div class="center">
 
     <?php if(session()->getFlashdata('message_error')) : ?>
         
@@ -20,28 +20,36 @@
     
     <?php endif; ?>
 
-    <form method="post" action="login/login" class="py-2">
+    <h2>Login Customer</h2>
+    <form method="post" action="login/login">
+        
         <?= csrf_field(); ?>
         
-        <div class="my-2">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" class ="form-control" name="username" required/>
+        <div class="txt-field">
+            <input type="text" name="username" required/>
+            <span></span>
+            <label for="username" class="">Username</label>
         </div>
-        <div class="my-2">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class ="form-control" name="password" required/>
+        <div class="txt-field">
+            <input type="password" name="password" required/>
+            <span></span>
+            <label for="password" class="">Password</label>
         </div>
+        <!-- <div class="forgot-pass">Forgot Password?</div> -->
         
         <!-- <div>
             <input type="submit" value="Login" class="btn btn-primary"/>
         </div> -->
         <div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="">Login</button>
+        </div>
+        <div class="registrasi-link">
+        Belum memiliki akun? <a href="<?= base_url('/customer/registercustomer');?>">Register sekarang!</a>
+        </div>
+        <div class="registrasi-link">
+            <a href="<?= base_url('');?>" > << Kembali</a>
         </div>
     </form>
-
-    <a href="<?= base_url('/customer/registercustomer');?>">Belum memiliki akun? Register sekarang!</a>
-
     
 </div>
 

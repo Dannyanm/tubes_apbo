@@ -65,17 +65,21 @@ class RegisterCustomer extends BaseController {
             return redirect()->to(base_url('/customer/login'))->withInput()->with('validation', $validation);
         }
 
-        $kode_customer = $this->customerModel->kodeCustomer();
-        
-        $this->customerModel->save([
-            'kode_customer' => $kode_customer,
-            'nama_customer' => $this->request->getVar('nama_customer'),
-            'username' => $this->request->getVar('username'),
-            'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-            'alamat' => $this->request->getVar('alamat'),
-            'no_hp' => $this->request->getVar('no_hp'),
-        ]);
+        // $kode_customer = $this->customerModel->kodeCustomer();
+        $ss = $this->request->getVar();
 
-        return redirect()->to(base_url('/customer/login'))->with('message_success', 'Registrasi berhasil! Silahkan login');
+
+        dd($ss);
+        
+        // $this->customerModel->save([
+        //     'kode_customer' => $kode_customer,
+        //     'nama_customer' => $this->request->getVar('nama_customer'),
+        //     'username' => $this->request->getVar('username'),
+        //     'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
+        //     'alamat' => $this->request->getVar('alamat'),
+        //     'no_hp' => $this->request->getVar('no_hp'),
+        // ]);
+
+        // return redirect()->to(base_url('/customer/login'))->with('message_success', 'Registrasi berhasil! Silahkan login');
     }
 }

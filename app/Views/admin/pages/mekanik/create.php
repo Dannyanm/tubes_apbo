@@ -2,6 +2,8 @@
 
 <?= $this->section('content'); ?>
 
+<main>
+
 <h2>Tambah Data Mekanik</h2>
 
 <div>
@@ -38,5 +40,7 @@
     </div>
 </form>
 </div>
+
+</main>
 
 <?= $this->endSection(); ?>

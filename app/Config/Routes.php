@@ -58,16 +58,20 @@ $routes->get('/admin/mekanik/(:any)', 'Admin\Mekanik::detail/$1');
 
 // routes customer admin
 $routes->get('/admin/customer', 'Admin\Customer::index');
+$routes->delete('/admin/customer/(:num)', 'Admin\Customer::delete/$1');
+
 
 // routes service admin
 $routes->get('/admin/service', 'Admin\Service::index');
 
 // routes spareparts admin
 $routes->get('/admin/spareparts', 'Admin\Spareparts::index');
-$routes->get('/admin/spareparts/(:segment)', 'Admin\Spareparts::$1');
+$routes->get('/admin/spareparts/create', 'Admin\Spareparts::create');
+// $routes->get('/admin/spareparts/(:segment)', 'Admin\Spareparts::$1');
 
 // routes transaksi admin
 $routes->get('/admin/transaksi', 'Admin\Transaksi::index');
+$routes->get('/admin/transaksi/selesai/(:num)', 'Admin\Transaksi::selesai/$1');
 
 // routes customer
 $routes->get('/customer', 'Customer\Customer::index');
@@ -81,8 +85,9 @@ $routes->get('/customer/logout', 'Customer\Login::logout');
 $routes->get('/customer/registercustomer', 'Customer\RegisterCustomer::index');
 $routes->get('/customer/registercustomer/register', 'Customer\RegisterCustomer::register');
 
-// routes booking customer
-$routes->get('/customer/booking', 'Customer\Booking::index');
+// routes order customer
+$routes->get('/customer/order', 'Customer\Order::index');
+$routes->get('/customer/order/save', 'Customer\Order::save');
 
 // routes pembayaran customer
 $routes->get('/customer/pembayaran', 'Customer\Pembayaran::index');

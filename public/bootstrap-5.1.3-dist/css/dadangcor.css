@@ -2,6 +2,7 @@ body{
     font-family: 'Poppins', sans-serif;
     /* font-size: 16px; */
     font-size: vmin;
+    overflow-x: hidden;
     
 }
 
@@ -17,6 +18,7 @@ a:active {
 .navbar{
     background-color: #52734D;
     color: #F8EDE3;
+    position: relative;
 }
 
 .user-option {
@@ -125,6 +127,28 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     /* background-image: url("https://images.pexels.com/photos/4424012/pexels-photo-4424012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.card {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 200px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+#tombol-logout{
+    color: #D5EEBB;
+}
+
+
+#tombol-logout:hover{
+    color: white;
 }
 
 

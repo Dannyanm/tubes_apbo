@@ -2,6 +2,8 @@
 
 <?= $this->section('content'); ?>
 
+<main>
+
 <h1>Daftar Harga Pelumas</h1>
 
 <table class="table">
@@ -34,5 +36,7 @@
     </tr>
   </tbody>
 </table>
+
+</main>
 
 <?= $this->endSection(); ?>

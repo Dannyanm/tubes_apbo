@@ -1,16 +1,16 @@
 <?= $this->extend('admin/layout/template'); ?>
 
 <?= $this->section('content'); ?>
-
+<main>
 <h1>Data Mekanik</h1>
 
-<?php if(session()->getFlashdata('message')) : ?>
-        
-    <div class="alert alert-success" role="alert">
-        <?= session()->getFlashdata('message');?>
-    </div>
+    <?php if(session()->getFlashdata('message')) : ?>
+            
+        <div class="alert alert-success" role="alert">
+            <?= session()->getFlashdata('message');?>
+        </div>
 
-<?php endif; ?>
+    <?php endif; ?>
 
 <div class="mb-2">
     <a href="<?= base_url('admin/mekanik/create');?>" class="btn btn-primary">Tambah Data</a>
@@ -51,5 +51,6 @@
       </tbody>
     </table>
 </div>
+</main>
 
 <?= $this->endSection(); ?>

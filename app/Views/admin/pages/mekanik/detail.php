@@ -1,6 +1,7 @@
 <?= $this->extend('admin/layout/template'); ?>
 
 <?= $this->section('content'); ?>
+<main>
 
 <h1>Detail Mekanik</h1>
 
@@ -20,6 +21,6 @@
     </form>
 
 </div>
-
+</main>
 
 <?= $this->endSection(); ?>

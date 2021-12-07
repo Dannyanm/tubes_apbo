@@ -9,6 +9,7 @@ class CustomerModel extends Model
     protected $table = 'customer';
     protected $useTimestamps = true;
     protected $allowedFields = ['kode_customer', 'nama_customer', 'username', 'password', 'alamat', 'no_hp'];
+    
 
     public function getCustomer($id = false)
     {
@@ -41,4 +42,24 @@ class CustomerModel extends Model
         return $kode_customer;
     }
 
+    public function kodeTransaksi()
+    {
+        $kode = $this->db->table('transaksi')
+        ->select('RIGHT(kode_transaksi,3) as kode_transaksi', false)
+        ->orderBy('kode_transaksi', 'DESC')
+        ->limit(1)->get()->getRowArray();
+
+        if($kode['kode_transaksi'] == null)
+        {
+            $no = 1;
+        }else{
+            $no = intval($kode['kode_transaksi']) + 1;
+        }
+
+        $transaksiID = "TRD";
+        $batas = str_pad($no, 3, "0", STR_PAD_LEFT);
+        $kode_transaksi = $transaksiID . $batas;
+
+        return $kode_transaksi;
+    }
 }
