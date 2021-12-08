@@ -10,7 +10,8 @@
     <tr>
         <th scope="col">No</th>
         <th scope="col">Kode Spareparts</th>
-        <th scope="col">Nama</th>
+        <th scope="col">Gambar</th>
+        <th scope="col">Kategori</th>
         <th scope="col">Merek</th>
         <th scope="col">Jenis Motor</th>
         <th scope="col">Stok</th>
@@ -23,7 +24,8 @@
     <tr>
         <th class="text-center" scope="row"><?= $i++; ?></th>
         <td><?= $s['kode_spareparts'] ?></td>
-        <td><?= $s['nama_spareparts'] ?></td>
+        <td class="gambar-spareparts"><img src="/img/<?= $s['gambar'] ?>"  alt="gambar"></td>
+        <td><?= $s['kategori_spareparts'] ?></td>
         <td><?= $s['merek_spareparts'] ?></td>
         <td><?= $s['jenis_spareparts'] ?></td>
         <td><?= $s['stok_spareparts'] ?></td>

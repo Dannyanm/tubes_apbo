@@ -6,25 +6,17 @@
 
 <h1>Data Spareparts</h1>
 
-<!-- <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"><b>Pelumas</b></h5>
-    <p class="card-text">Daftar harga pelumas dengan harga terbaik!</p>
-    <a href="<?= base_url('/admin/spareparts/detail');?>" class="button-toggler button-toggler-primary">Cek disini!</a>
-  </div>
-</div> -->
-
-<?php if(session()->getFlashdata('message')) : ?>
-        
-        <div class="alert alert-success" role="alert">
-            <?= session()->getFlashdata('message');?>
-        </div>
-    
-<?php endif; ?>
-
 <div class="mb-2">
     <a href="<?= base_url('admin/spareparts/create');?>" class="btn btn-primary">Tambah Spareparts</a>
+</div>
+<div>
+    <?php if(session()->getFlashdata('message')) : ?>
+            
+            <div class="alert alert-success" role="alert">
+                <?= session()->getFlashdata('message');?>
+            </div>
+        
+    <?php endif; ?>
 </div>
 
 
@@ -33,11 +25,13 @@
     <tr>
         <th scope="col">No</th>
         <th scope="col">Kode Spareparts</th>
-        <th scope="col">Nama</th>
+        <th scope="col">Gambar</th>
+        <th scope="col">Kategori</th>
         <th scope="col">Merek</th>
         <th scope="col">Jenis Motor</th>
         <th scope="col">Stok</th>
         <th scope="col">Harga</th>
+        <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody class="text-center">
@@ -46,11 +40,21 @@
     <tr>
         <th class="text-center" scope="row"><?= $i++; ?></th>
         <td><?= $s['kode_spareparts'] ?></td>
-        <td><?= $s['nama_spareparts'] ?></td>
+        <td><img src="/img/<?= $s['gambar'] ?>" class="gambar-spareparts" alt="gambar"></td>
+        <td><?= $s['kategori_spareparts'] ?></td>
         <td><?= $s['merek_spareparts'] ?></td>
         <td><?= $s['jenis_spareparts'] ?></td>
         <td><?= $s['stok_spareparts'] ?></td>
         <td><?= 'Rp. ' . $s['harga_spareparts'] ?></td>
+        <td>
+            <a href="/admin/spareparts/edit/<?= $s['id']; ?>" class="btn btn-warning">Update</a>
+            <form action="/admin/spareparts/<?= $s['id']; ?>" method="post" class="d-inline">
+                <?= csrf_field(); ?>
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')">Delete</button>
+            </form>
+        </td>
+
     </tr>
     
     <?php endforeach; ?>

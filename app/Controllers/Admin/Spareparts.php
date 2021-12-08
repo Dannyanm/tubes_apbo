@@ -79,18 +79,26 @@ class Spareparts extends BaseController{
         //     return redirect()->to(base_url('/customer/order/service'))->withInput()->with('message', 'Cek kembali, pastikan data diinput dengan benar!');
         // }
 
+        // image upload
+
+        $fileGambar = $this->request->getFile('gambar');
+        $fileGambar->move('img');
+
+        // ambil nama file
+        $namaGambar = $fileGambar->getName();
+
         $kode_spareparts = $this->sparepartsModel->kodeSpareparts();
+        
         $this->sparepartsModel->save([
             'kode_spareparts' => $kode_spareparts,
-            'nama_spareparts' => $this->request->getVar('nama_spareparts'),
+            'kategori_spareparts' => $this->request->getVar('kategori_spareparts'),
             'merek_spareparts' => $this->request->getVar('merek_spareparts'),
             'jenis_spareparts' => $this->request->getVar('jenis_spareparts'),
             'stok_spareparts' => $this->request->getVar('stok_spareparts'),
             'harga_spareparts' => $this->request->getVar('harga_spareparts'),
+            'gambar' => $namaGambar,
         ]);
-        // $ss = $this->request->getVar();
-        // d($ss);
-
+        
         session()->setFlashdata('message', 'Spareparts berhasil ditambahkan!');
 
         return redirect()->to(base_url('/admin/spareparts'));
@@ -98,14 +106,41 @@ class Spareparts extends BaseController{
         
     }
 
-    // public function detail()
-    // {
-    //     $data = [
-    //         'title' => 'Detail Spareparts',
-    //         'user_status' => 'Admin'
-    //     ];
-    //     echo view('admin/pages/spareparts/detail', $data);
-    // }
+    public function edit($id)
+    {
+        $data = [
+            'title' => 'Edit Data',
+            'user_status' => 'Admin',
+            'validation' =>\Config\Services::validation(),
+            'spareparts' => $this->sparepartsModel->getSpareparts($id)
+        ];
+
+        echo view('admin/pages/spareparts/edit', $data);
+    }
+
+    public function update($id)
+    {
+        $this->sparepartsModel->save([
+            'id' => $id,
+            'nama_mekanik' => $this->request->getVar('nama_mekanik'),
+            'stok_spareparts' => $this->request->getVar('stok_spareparts'),
+            'harga_spareparts' => $this->request->getVar('harga_spareparts')
+            
+        ]);
+
+        session()->setFlashdata('message', 'Data Spareparts berhasil diupdate!');
+
+        return redirect()->to(base_url('/admin/spareparts'));
+    }
+
+    public function delete($id)
+    {
+        $this->sparepartsModel->delete($id);
+
+        session()->setFlashdata('message', 'Data berhasil dihapus!');
+
+        return redirect()->to(base_url('/admin/spareparts'));
+    }
     
 }
 

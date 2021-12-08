@@ -26,10 +26,10 @@ class TransaksiModel extends Model
         // ->orderBy('kode_transaksi', 'DESC')
         // ->limit(1)->get()->getRowArray();
 
-        $kode = $this->db->table('transaksi')
-        ->select('id as id', false)
-        ->orderBy('id', 'DESC')
-        ->limit(1)->get()->getRowArray();
+        // $kode = $this->db->table('transaksi')
+        // ->select('id as id', false)
+        // ->orderBy('id', 'DESC')
+        // ->limit(1)->get()->getRowArray();
 
         // if($kode['id'] == null)
         // {
@@ -38,10 +38,14 @@ class TransaksiModel extends Model
         //     $no = intval($kode['kode_transaksi']) + 1;
         //     $no = intval($kode['id']) + 1;
         // }
-        $no = intval($kode['id']) + 1;
+        // $no = intval($kode['id']) + 1;
 
-        $transaksiID = "TRD";
-        $batas = str_pad($no, 3, "0", STR_PAD_LEFT);
+        // $transaksiID = "TRD";
+        // $batas = str_pad($no, 3, "0", STR_PAD_LEFT);
+        // $kode_transaksi = $transaksiID . $batas;
+
+        $transaksiID = 'TRD';
+        $batas = uniqid();
         $kode_transaksi = $transaksiID . $batas;
 
         return $kode_transaksi;

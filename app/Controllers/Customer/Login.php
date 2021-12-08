@@ -19,10 +19,6 @@ class Login extends BaseController{
             'title' => 'Login'
         ];
 
-        if(session('id')){
-            return redirect()->to(base_url('/customer'));
-        }
-
         echo view('customer/pages/login/index', $data);
     }
 
@@ -59,7 +55,7 @@ class Login extends BaseController{
 
     public function logout()
     {
-        session()->remove('id');
+        session()->remove('nama_customer');
         return redirect()->to(base_url('/customer/login'));
     }
 }

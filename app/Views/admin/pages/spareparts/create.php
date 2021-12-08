@@ -7,7 +7,7 @@
 <h2>Tambah Spareparts</h2>
 
 <div>
-<form method="post" action="/admin/spareparts/save">
+<form method="post" action="/admin/spareparts/save" enctype="multipart/form-data">
     <?= csrf_field(); ?>
     <div class="my-2">
         <label for="kode_spareparts" class="form-label">Kode</label>
@@ -15,8 +15,8 @@
         
     </div>
     <div class="my-2">
-        <label for="nama_spareparts" class="form-label">Nama</label>
-        <input type="text" class ="form-control" name="nama_spareparts" />
+        <label for="kategori_spareparts" class="form-label">Kategori</label>
+        <input type="text" class ="form-control" name="kategori_spareparts" />
     </div>
     <div class="my-2">
         <label for="merek_spareparts" class="form-label">Merek</label>
@@ -36,6 +36,10 @@
     <div class="my-2">
         <label for="harga_spareparts" class="form-label">Harga</label>
         <input type="text" class ="form-control" name="harga_spareparts" />
+    </div>
+    <div class="my-2">
+        <label for="gambar" class="form-label">Pilih Gambar</label>
+        <input type="file" class ="form-control" name="gambar" />
     </div>
     <div>
         <input type="submit" value="Submit" class="btn btn-primary"/>

@@ -67,7 +67,10 @@ $routes->get('/admin/service', 'Admin\Service::index');
 // routes spareparts admin
 $routes->get('/admin/spareparts', 'Admin\Spareparts::index');
 $routes->get('/admin/spareparts/create', 'Admin\Spareparts::create');
+$routes->delete('/admin/spareparts/(:num)', 'Admin\Spareparts::delete/$1');
 // $routes->get('/admin/spareparts/(:segment)', 'Admin\Spareparts::$1');
+
+$routes->get('/admin/cart', 'Admin\Spareparts::cart');
 
 // routes transaksi admin
 $routes->get('/admin/transaksi', 'Admin\Transaksi::index');
