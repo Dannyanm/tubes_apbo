@@ -78,6 +78,8 @@ $routes->get('/admin/transaksi/selesai/(:num)', 'Admin\Transaksi::selesai/$1');
 
 // routes customer
 $routes->get('/customer', 'Customer\Customer::index');
+$routes->get('/customer/edit/(:any)', 'Customer\Customer::edit/$1');
+$routes->get('/customer/customer/mekanik/(:any)', 'Customer\Customer::edit/$1');
 
 // routes login customer
 $routes->get('/customer/login', 'Customer\Login::index');

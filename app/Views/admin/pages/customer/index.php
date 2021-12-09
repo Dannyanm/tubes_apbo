@@ -31,12 +31,12 @@
             <th class="text-center" scope="row"><?= $i++; ?></th>
             <td><?= $c['kode_customer']; ?></td>
             <td><?= $c['nama_customer']; ?></td>
-            <td><?= $c['alamat']; ?></td>
+            <td><?= $c['alamat_customer']; ?></td>
             <td><?= $c['no_hp']; ?></td>
             <td class="text-center">
-                <!-- <button href="/admin/mekanik/<?= $c['id']; ?>" class="btn btn-success">Detail</button> -->
-                <!-- <a href="/admin/mekanik/edit/<?= $c['id']; ?>" class="btn btn-warning">Edit</a> -->
-                <form action="/admin/customer/<?= $c['id']; ?>" method="post" class="d-inline">
+                <!-- <button href="/admin/mekanik/" class="btn btn-success">Detail</button> -->
+                <!-- <a href="/admin/mekanik/edit/" class="btn btn-warning">Edit</a> -->
+                <form action="/admin/customer/<?= $c['id_customer']; ?>" method="post" class="d-inline">
                     <?= csrf_field(); ?>
                     <input type="hidden" name="_method" value="DELETE">
                     <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')">Delete</button>

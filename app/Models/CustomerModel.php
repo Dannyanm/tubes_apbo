@@ -8,62 +8,24 @@ class CustomerModel extends Model
 {
     protected $table = 'customer';
     protected $useTimestamps = true;
-    protected $allowedFields = ['kode_customer', 'nama_customer', 'username', 'password', 'alamat', 'no_hp'];
+    protected $primaryKey = 'id_customer';
+    protected $allowedFields = ['kode_customer', 'nama_customer', 'username', 'password', 'alamat_customer', 'no_hp'];
     
-
-    public function getCustomer($id = false)
+    public function getCustomer($id_customer = false)
     {
-        if($id == false){
+        if($id_customer == false){
             return $this->findAll();
         }
 
-        return $this->where(['id' => $id])->first();
+        return $this->where(['id_customer' => $id_customer])->first();
     }
-
+    
     public function kodeCustomer()
     {
-        // $kode = $this->db->table('customer')
-        // ->select('RIGHT(kode_customer,3) as kode_customer', false)
-        // ->orderBy('kode_customer', 'DESC')
-        // ->limit(1)->get()->getRowArray();
-
-        // if($kode['kode_customer'] == null)
-        // {
-        //     $no = 1;
-        // }else {
-        //     $no = intval($kode['kode_customer']) + 1;
-        // }
-
-        // $tgl = date('Ymd');
-        // $customerID = "CMD";
-        // $batas = str_pad($no, 3, "0", STR_PAD_LEFT);
-        // $kode_customer = $customerID . $batas;
-
         $transaksiID = 'CMD';
         $batas = uniqid();
         $kode_customer = $transaksiID . $batas;
 
         return $kode_customer;
     }
-
-    // public function kodeTransaksi()
-    // {
-    //     $kode = $this->db->table('transaksi')
-    //     ->select('RIGHT(kode_transaksi,3) as kode_transaksi', false)
-    //     ->orderBy('kode_transaksi', 'DESC')
-    //     ->limit(1)->get()->getRowArray();
-
-    //     if($kode['kode_transaksi'] == null)
-    //     {
-    //         $no = 1;
-    //     }else{
-    //         $no = intval($kode['kode_transaksi']) + 1;
-    //     }
-
-    //     $transaksiID = "TRD";
-    //     $batas = str_pad($no, 3, "0", STR_PAD_LEFT);
-    //     $kode_transaksi = $transaksiID . $batas;
-
-    //     return $kode_transaksi;
-    // }
 }

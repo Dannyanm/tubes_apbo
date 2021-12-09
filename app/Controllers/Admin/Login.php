@@ -31,7 +31,7 @@ class Login extends BaseController{
 
         if($user) {
             if(password_verify($post['password'], $user->password)){
-                $params = ['id' => $user->id];
+                $params = ['id_admin' => $user->id_admin];
                 session()->set($params);
                 return redirect()->to(base_url('/admin'));
             } else {
@@ -44,7 +44,8 @@ class Login extends BaseController{
     
     public function logout()
     {
-        session()->remove('id');
+        // session()->remove('id_admin');
+        session_destroy();
         return redirect()->to(base_url('/admin/login'));
     }
 }

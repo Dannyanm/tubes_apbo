@@ -8,6 +8,7 @@ use App\Models\CustomerModel;
 class RegisterCustomer extends BaseController {
     public function __construct()
     {
+        // $this->load->database();
         $this->customerModel = new CustomerModel();   
     }
 
@@ -46,8 +47,8 @@ class RegisterCustomer extends BaseController {
                     'required' => 'Password harus diisi'
                 ]
             ],
-            'alamat' => [
-                'rules' => 'required[customer.alamat]',
+            'alamat_customer' => [
+                'rules' => 'required[customer.alamat_customer]',
                 'errors' => [
                     'required' => 'Alamat harus diisi'
                 ]
@@ -62,7 +63,7 @@ class RegisterCustomer extends BaseController {
         ])){
             $validation = \Config\Services::validation();
 
-            return redirect()->to(base_url('/customer/login'))->withInput()->with('validation', $validation);
+            return redirect()->to(base_url('/customer/registercustomer'))->withInput()->with('validation', $validation);
         }
 
         $kode_customer = $this->customerModel->kodeCustomer();
@@ -73,10 +74,11 @@ class RegisterCustomer extends BaseController {
             'nama_customer' => $this->request->getVar('nama_customer'),
             'username' => $this->request->getVar('username'),
             'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-            'alamat' => $this->request->getVar('alamat'),
+            'alamat_customer' => $this->request->getVar('alamat_customer'),
             'no_hp' => $this->request->getVar('no_hp'),
         ]);
 
         return redirect()->to(base_url('/customer/login'))->with('message_success', 'Registrasi berhasil! Silahkan login');
+        
     }
 }

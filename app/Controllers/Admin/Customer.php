@@ -25,25 +25,25 @@ class Customer extends BaseController{
         echo view('admin/pages/customer/index', $data);
     }
 
-    public function detail($id)
+    public function detail($id_customer)
     {
         $data = [
             'title' => 'Detail Data Customer',
             'user_status' => 'Admin',
-            'customer' => $this->customerModel->getCustomer($id),
+            'customer' => $this->customerModel->getCustomer($id_customer),
         ];
 
         if(empty($data['customer'])){
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Mekanik dengan id '. $id . ' tidak ditemukan.');
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Mekanik dengan id '. $id_customer . ' tidak ditemukan.');
         }
 
         echo view('admin/pages/customer/detail', $data);
 
     }
 
-    public function delete($id)
+    public function delete($id_customer)
     {
-        $this->customerModel->delete($id);
+        $this->customerModel->delete($id_customer);
         session()->setFlashdata('message', 'Data berhasil dihapus!');
 
         return redirect()->to(base_url('/admin/customer'));

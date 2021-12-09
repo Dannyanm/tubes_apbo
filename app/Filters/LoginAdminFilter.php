@@ -15,7 +15,7 @@ class LoginAdminFilter implements FilterInterface
         //     return redirect()->to(base_url('/customer/login'));
         // } 
     
-        if(!session('id')){
+        if(!session('id_admin')){
             return redirect()->to(base_url('/admin/login'));
         }
     }

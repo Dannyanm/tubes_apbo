@@ -20,7 +20,6 @@ class Spareparts extends BaseController {
             'title' => 'Daftar Spareparts',
             'user_status' => 'Customer',
             'spareparts' => $spareparts,
-            // 'spareparts' => $spareparts
         ];
 
         echo view('customer/pages/spareparts/index', $data);

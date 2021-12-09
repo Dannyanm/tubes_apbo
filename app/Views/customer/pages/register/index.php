@@ -46,8 +46,8 @@
         
     </div>
     <div class="my-2">
-        <label for="alamat" class="form-label">Alamat</label>
-        <input type="text" class ="form-control" name="alamat" value="">
+        <label for="alamat_customer" class="form-label">Alamat</label>
+        <input type="text" class ="form-control" name="alamat_customer" value="">
         
     </div>
     <div class="my-2">

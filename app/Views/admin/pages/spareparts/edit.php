@@ -9,12 +9,12 @@
     <?= csrf_field(); ?>
     <div class="my-2">
         <label for="stok_spareparts" class="form-label">Stok Spareparts</label>
-        <input type="text" class ="form-control" name="stok_spareparts" value="<?= old('stok_spareparts'); ?>" required/>
+        <input type="text" class ="form-control" name="stok_spareparts" value="<?= $spareparts['stok_spareparts'] ?>" required/>
         
     </div>
     <div class="my-2">
         <label for="harga_spareparts" class="form-label">Harga Spareparts</label>
-        <input type="text" class ="form-control" name="harga_spareparts" value="<?= old('harga_spareparts'); ?>" required/>
+        <input type="text" class ="form-control" name="harga_spareparts" value="<?= $spareparts['harga_spareparts'] ?>" required/>
         
     </div>
 

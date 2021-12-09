@@ -30,6 +30,7 @@ class Login extends BaseController{
 
         $post = $this->request->getPost();
         // $query = $builder->getWhere(['username' => $post['username']]);
+        // $query = $this->db->table('customer')->getWhere(['username' => $post['username']]);
         $query = $this->db->table('customer')->getWhere(['username' => $post['username']]);
         // $hashPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $user = $query->getRow();
@@ -37,12 +38,19 @@ class Login extends BaseController{
         // d($hashPassword);
         // d($query);
         // dd(password_verify($post['password'], $user->password));
-        // dd($user);
+        // $s = session()->set($params);
+        // dd($s);
+        
 
         if($user) {
             if(password_verify($post['password'], $user->password)) {
-                $params = ['id' => $user->id,
-                            'nama_customer' => $user->nama_customer];
+                $params = [
+                            'id_customer' => $user->id_customer,
+                            'kode_customer' => $user->kode_customer,
+                            'nama_customer' => $user->nama_customer,
+                            'alamat_customer' => $user->alamat_customer,
+                            'no_hp' => $user->no_hp,
+                        ];
                 session()->set($params);
                 return redirect()->to(base_url('/customer'));
             } else {
@@ -55,7 +63,8 @@ class Login extends BaseController{
 
     public function logout()
     {
-        session()->remove('nama_customer');
+        // session()->remove('id_customer');
+        session_destroy();
         return redirect()->to(base_url('/customer/login'));
     }
 }

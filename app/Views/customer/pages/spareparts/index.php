@@ -24,7 +24,7 @@
     <tr>
         <th class="text-center" scope="row"><?= $i++; ?></th>
         <td><?= $s['kode_spareparts'] ?></td>
-        <td class="gambar-spareparts"><img src="/img/<?= $s['gambar'] ?>"  alt="gambar"></td>
+        <td><img src="/img/<?= $s['gambar'] ?>"  alt="gambar" class="gambar-spareparts"></td>
         <td><?= $s['kategori_spareparts'] ?></td>
         <td><?= $s['merek_spareparts'] ?></td>
         <td><?= $s['jenis_spareparts'] ?></td>
