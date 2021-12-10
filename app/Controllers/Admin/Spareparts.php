@@ -11,6 +11,7 @@ class Spareparts extends BaseController{
     public function __construct()
     {
         $this->sparepartsModel = new SparepartsModel();
+        helper('number');
     }
 
     public function index()

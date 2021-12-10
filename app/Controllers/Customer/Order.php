@@ -5,6 +5,7 @@ namespace App\Controllers\Customer;
 use App\Controllers\BaseController;
 use App\Models\CustomerModel;
 use App\Models\TransaksiModel;
+use App\Models\SparepartsModel;
 
 class Order extends BaseController {
 
@@ -14,28 +15,39 @@ class Order extends BaseController {
     {
         $this->customerModel = new CustomerModel();
         $this->transaksiModel = new TransaksiModel();
+        $this->sparepartsModel = new SparepartsModel();
+        helper('number');
     }
     
     public function index()
     {
+        $kode_transaksi = $this->transaksiModel->kodeTransaksi();
+        $spareparts = $this->sparepartsModel->findAll();
+        $serviceID = 'SER';
+        $batas = substr(uniqid(rand(), true), 5,5);
+        $kode_service = $serviceID . $batas;
         $data = [
             'title' => 'Order',
-            'user_status' => 'Customer'
+            'user_status' => 'Customer',
+            'spareparts' => $spareparts,
+            'kode_transaksi' => $kode_transaksi,
+            'kode_service' => $kode_service,
         ];
-
         echo view('customer/pages/order/index', $data);
     }
 
-    public function service()
+    public function oservice()
     {
-        $kode_transaksi = $this->transaksiModel->kodeTransaksi();
+        $serviceID = 'SER';
+        $batas = substr(uniqid(rand(), true), 5,5);
+        $kode_service = $serviceID . $batas;
         $data = [
             'title' => 'Booking Service',
             'user_status' => 'Customer',
-            'kode_transaksi' => $kode_transaksi,
+            'kode_service' => $kode_service,
         ];
 
-        echo view('customer/pages/order/service', $data);
+        echo view('customer/pages/order/oservice', $data);
     }
 
     public function save()
@@ -83,4 +95,50 @@ class Order extends BaseController {
         // $ss = $this->request->getVar();
         // dd($ss);
     }
+
+    // public function order()
+    // {
+    //     $kode_transaksi = $this->transaksiModel->kodeTransaksi();
+    //     $spareparts = $this->sparepartsModel->findAll();
+    //     $serviceID = 'SER';
+    //     $batas = substr(uniqid(rand(), true), 5,5);
+    //     $kode_service = $serviceID . $batas;
+    //     $data = [
+    //         'title' => 'Booking Service',
+    //         'user_status' => 'Customer',
+    //         'spareparts' => $spareparts,
+    //         'kode_transaksi' => $kode_transaksi,
+    //         'kode_service' => $kode_service,
+    //     ];
+    //     echo view('customer/pages/order/index', $data);
+    // }
+
+    public function ospareparts()
+    {
+        $cart = \Config\Services::cart();
+        $cart->insert(array(
+            'id'      => $this->request->getVar('kode_spareparts'),
+            'qty'     => 1,
+            'price'   => $this->request->getVar('harga_spareparts'),
+            'name'    => $this->request->getVar('kategori_spareparts'),
+            'options' => array(
+                'jenis_spareparts' => $this->request->getVar('jenis_spareparts'), 
+                'merek_spareparts' => $this->request->getVar('merek_spareparts'), 
+                )
+        ));
+
+        // for flash message
+        $m_kategori = $this->request->getVar('kategori_spareparts');
+        $m_merek = $this->request->getVar('merek_spareparts');
+
+        session()->setFlashdata('message', 'Spareparts ' . $m_kategori . ' ' . $m_merek .' berhasil ditambahkan ke keranjang');
+
+        return redirect()->to(base_url('/customer/order'));
+    }
+
+    public function updateKeranjang()
+    {
+
+    }
+
 }

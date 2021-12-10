@@ -10,7 +10,7 @@ class Login extends BaseController{
 
     public function __construct()
     {
-
+        helper('number');
     }
 
     public function index()

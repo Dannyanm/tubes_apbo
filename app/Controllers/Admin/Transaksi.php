@@ -14,6 +14,7 @@ class Transaksi extends BaseController {
     {
         $this->transaksiModel = new TransaksiModel();
         $this->tselesaiModel = new TselesaiModel();
+        helper('number');
     }
     public function index()
     {

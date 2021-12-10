@@ -29,7 +29,7 @@
         <td><?= $s['merek_spareparts'] ?></td>
         <td><?= $s['jenis_spareparts'] ?></td>
         <td><?= $s['stok_spareparts'] ?></td>
-        <td><?= 'Rp. ' . $s['harga_spareparts'] ?></td>
+        <td><?= number_to_currency($s['harga_spareparts'], 'IDR'); ?></td>
     </tr>
     
     <?php endforeach; ?>

@@ -6,6 +6,11 @@ use App\Controllers\BaseController;
 
 class Service extends BaseController{
 
+    public function __construct()
+    {
+        helper('number');
+    }
+
     public function index()
     {
         $data = [

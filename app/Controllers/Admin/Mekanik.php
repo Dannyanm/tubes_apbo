@@ -11,6 +11,7 @@ class Mekanik extends BaseController{
     public function __construct()
     {
         $this->mekanikModel = new MekanikModel();
+        helper('number');
     }
 
     public function index()

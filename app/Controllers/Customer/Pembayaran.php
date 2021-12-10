@@ -5,6 +5,11 @@ namespace App\Controllers\Customer;
 use App\Controllers\BaseController;
 
 class Pembayaran extends BaseController {
+
+    public function __construct()
+    {
+        helper('number');
+    }
     
     public function index()
     {

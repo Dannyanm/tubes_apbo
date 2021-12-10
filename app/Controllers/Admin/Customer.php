@@ -11,6 +11,7 @@ class Customer extends BaseController{
     public function __construct()
     {
         $this->customerModel = new CustomerModel();
+        helper('number');
     }
 
     public function index()

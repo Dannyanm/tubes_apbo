@@ -100,6 +100,10 @@ $routes->get('/customer/pembayaran', 'Customer\Pembayaran::index');
 // routes spareparts customer
 $routes->get('/customer/spareparts', 'Customer\Spareparts::index');
 
+$routes->get('/customer/order/ospareparts', 'Customer\Order::ospareparts');
+
+
+
 
 
 

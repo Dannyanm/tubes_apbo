@@ -38,7 +38,7 @@
             <td><?= $t['nama_customer']; ?></td>
             <td><?= $t['jenis_transaksi']; ?></td>
             <td><?= $t['tanggal_transaksi']; ?></td>
-            <td><?= 'Rp. ' . $t['harga_transaksi']; ?></td>
+            <td><?= number_to_currency($t['harga_transaksi'], 'IDR'); ?></td>
             <td class="text-center">
                 <!-- <button href="/admin/mekanik/<?= $t['id']; ?>" class="btn btn-success">Detail</button> -->
                 <!-- <a href="/admin/mekanik/edit/<?= $t['id']; ?>" class="btn btn-warning">Edit</a> -->

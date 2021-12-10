@@ -8,5 +8,8 @@ use App\Models\TselesaiModel;
 
 class Tselesai extends BaseController
 {
-    
+    public function __construct()
+    {
+        helper('number');
+    }
 }

@@ -18,7 +18,7 @@
     <?= csrf_field(); ?>
     <div class="my-2">
         <label for="kode_transaksi" class="form-label">Kode</label>
-        <input type="text" class ="form-control " name="kode_transaksi" value="<?= $kode_transaksi ?>" disabled/>
+        <input type="text" class ="form-control " name="kode_service" value="<?= $kode_service ?>" disabled/>
     </div>
     <div class="my-2">
         <label for="jenis_transaksi" class="form-label">Jenis</label>

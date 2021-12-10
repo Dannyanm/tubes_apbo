@@ -9,7 +9,8 @@ class RegisterCustomer extends BaseController {
     public function __construct()
     {
         // $this->load->database();
-        $this->customerModel = new CustomerModel();   
+        $this->customerModel = new CustomerModel();
+        helper('number');   
     }
 
     public function index()
