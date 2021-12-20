@@ -14,49 +14,64 @@
 
 ?>
 
-<main>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Profil</h1>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
-<h1>Profil Customer</h1>
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">About</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <strong><i class="fas fa-thin fa-fingerprint"></i> Kode</strong>
+                            <p class="text-muted">
+                                <?= $kode_customer; ?>
+                            </p>
+                            <hr>
 
-<div>
-    <?php if(session()->getFlashdata('message')) : ?>
-            
-            <div class="alert alert-success" role="alert">
-                <?= session()->getFlashdata('message');?>
+                            <strong><i class="fas fa-solid fa-user"></i> Nama Lengkap</strong>
+                            <p class="text-muted">
+                                <?= $nama_customer; ?>
+                            </p>
+                            <hr>
+
+                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Alamat</strong>
+                            <p class="text-muted">
+                                <?= $alamat_customer; ?>
+                            </p>
+                            <hr>
+                            <strong><i class="fas fa-solid fa-phone"></i> No. Handphone</strong>
+                            <p class="text-muted">
+                                <?= $no_hp; ?>
+                            </p>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card card-primary-->
+                </div>
+                <!-- / .col-md-6 -->
             </div>
-        
-    <?php endif; ?>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /. Main content -->
 </div>
-
-<table class="table-profil">
-  <tbody>
-    <tr>
-      <td>Kode</td>
-      <td>:</td>
-      <td><?= $kode_customer; ?></td>
-    </tr>
-    <tr>
-      <td>Nama</td>
-      <td>:</td>
-      <td><?= $nama_customer; ?></td>
-    </tr>
-    <tr>
-      <td>Alamat</td>
-      <td>:</td>
-      <td><?= $alamat_customer; ?></td>
-    </tr>
-    <tr>
-      <td>No. HP</td>
-      <td>:</td>
-      <td><?= $no_hp; ?></td>
-    </tr>
-    
-  </tbody>
-</table>
-
-
-<a href="/customer/edit/<?= $id_customer; ?>" class="btn btn-warning">Update</a>
-
-</main>
+<!-- /.content-wrapper -->
 
 <?= $this->endSection(); ?>

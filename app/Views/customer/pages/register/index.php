@@ -2,63 +2,64 @@
 
 <?= $this->section('content'); ?>
 
+<div class="login-box">
+    <!-- /.login-logo -->
+    <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <a href="<?= base_url('/') ?>" class="h1"><b>Dadang</b>Cornering</a>
+            </div>
+        <div class="card-body">
+            <p class="login-box-msg">Register Customer</p>
 
-<div class="px-5 py-5">
+            <?php if(session()->getFlashdata('message_error')) : ?>
+                <div class="alert alert-danger" role="alert">
+                    <?= session()->getFlashdata('message_error');?>
+                </div>
+            <?php endif; ?>
 
-<h2>Register Akun</h2>
+            <?php if(session()->getFlashdata('message_success')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->getFlashdata('message_success');?>
+                </div>
+            <?php endif; ?>
 
-    <?php if(session()->getFlashdata('message_error')) : ?>
-        
-        <div class="alert alert-danger" role="alert">
-            <?= session()->getFlashdata('message_error');?>
+            <form method="post" action="registercustomer/register" method="post">
+            <?= csrf_field(); ?>
+                <div class="input-group mb-3">
+                    <input type="text" class ="form-control " name="kode_customer" value="<?= $kode_customer ?>" disabled/>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class ="form-control" name="nama_customer" placeholder="Nama"/>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class ="form-control" name="username" placeholder="Username">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class ="form-control" name="password" placeholder="Password">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class ="form-control" name="alamat_customer" placeholder="Alamat">  
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class ="form-control" name="no_hp" placeholder="No. Handphone">
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </form>
         </div>
-    
-    <?php endif; ?>
-
-    <?php if(session()->getFlashdata('message_success')) : ?>
-        
-        <div class="alert alert-success" role="alert">
-            <?= session()->getFlashdata('message_success');?>
-        </div>
-    
-    <?php endif; ?>
-
-<form method="post" action="registercustomer/register" >
-    <?= csrf_field(); ?>
-    <div class="my-2">
-        <label for="kode_customer" class="form-label">Kode</label>
-        <input type="text" class ="form-control " name="kode_customer" value="<?= $kode_customer ?>" disabled/>
-        
+        <!-- /.card-body -->
     </div>
-    <div class="my-2">
-        <label for="nama_customer" class="form-label">Nama</label>
-        <input type="text" class ="form-control" name="nama_customer" value=""/>
-        
-    </div>
-    <div class="my-2">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" class ="form-control" name="username" value="">
-        
-    </div>
-    <div class="my-2">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class ="form-control" name="password" value="">
-        
-    </div>
-    <div class="my-2">
-        <label for="alamat_customer" class="form-label">Alamat</label>
-        <input type="text" class ="form-control" name="alamat_customer" value="">
-        
-    </div>
-    <div class="my-2">
-        <label for="no_hp" class="form-label">No. Handphone</label>
-        <input type="text" class ="form-control" name="no_hp" value="">
-        
-    </div>
-    <div>
-        <input type="submit" value="Submit" class="btn btn-primary"/>
-    </div>
-</form>
+    <!-- /.card -->
 </div>
+<!-- /.login-box -->
 
 <?= $this->endSection(); ?>

@@ -8,7 +8,7 @@ use SebastianBergmann\Invoker\Invoker;
 class TransaksiModel extends Model
 {
     protected $table = 'transaksi';
-    protected $allowedFields = ['kode_transaksi', 'jenis_transaksi', 'tanggal_transaksi', 'harga_transaksi', 'nama_customer'];
+    protected $allowedFields = ['kode_transaksi', 'kode_customer', 'nama_customer', 'tanggal_transaksi', 'total_harga_transaksi'];
 
     public function getTransaksi($id = false)
     {
@@ -17,6 +17,16 @@ class TransaksiModel extends Model
         }
 
         return $this->where(['id' => $id])->first();
+    }
+
+    public function getTransaksiByKodeTransaksi($kode_transaksi)
+    {
+        if($kode_transaksi == false)
+        {
+            return $this->findAll();
+        }
+
+        return $this->where(['kode_transaksi' => $kode_transaksi])->first();
     }
 
     public function kodeTransaksi()

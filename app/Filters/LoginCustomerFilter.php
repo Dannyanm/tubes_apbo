@@ -20,7 +20,7 @@ class LoginCustomerFilter implements FilterInterface
         // return dd('id');
     
         if(!session('id_customer')){
-            return redirect()->to(base_url('/customer/login'));
+            return redirect()->to(base_url('/customer/customerlogin'));
         }
     }
 

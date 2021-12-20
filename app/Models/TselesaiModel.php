@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class TselesaiModel extends Model 
 {
     protected $table = 'transaksi_selesai';
-    protected $allowedFields = ['kode_transaksi', 'nama_customer', 'jenis_transaksi', 'tanggal_transaksi', 'harga_transaksi'];
+    protected $allowedFields = ['kode_transaksi', 'kode_customer', 'nama_customer', 'tanggal_transaksi', 'total_harga_transaksi'];
 
     public function getTselesai($id = false)
     {
@@ -17,6 +17,16 @@ class TselesaiModel extends Model
 
         return $this->where(['id' => $id])->first();
 
+    }
+
+    public function getTransaksiByKodeTransaksi($kode_transaksi)
+    {
+        if($kode_transaksi == false)
+        {
+            return $this->findAll();
+        }
+
+        return $this->where(['kode_transaksi' => $kode_transaksi])->first();
     }
 
     

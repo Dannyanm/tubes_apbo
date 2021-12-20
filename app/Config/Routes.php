@@ -35,17 +35,13 @@ $routes->setAutoRoute(true);
 // routes home
 $routes->get('/', 'Home\Home::index');
 
-//routes login
-$routes->get('/login', 'Login\Login::index');
-$routes->get('/login/pages/(:segment)', 'Login\Login::$1');
-
 // routes admin
 $routes->get('/admin', 'Admin\Admin::index');
 
 // routes login admin
-$routes->get('/admin/login', 'Admin\Login::index');
-$routes->get('/admin/login/login', 'Admin\Login::login');
-$routes->get('/admin/logout', 'Admin\Login::logout');
+$routes->get('/admin/adminlogin', 'Admin\AdminLogin::index');
+$routes->get('/admin/adminlogin/login', 'Admin\AdminLogin::login');
+$routes->get('/admin/logout', 'Admin\AdminLogin::logout');
 
 // routes mekanik admin
 $routes->get('/admin/mekanik', 'Admin\Mekanik::index');
@@ -57,50 +53,49 @@ $routes->get('/admin/mekanik/update/(:num)', 'Admin\Mekanik::update/$1');
 $routes->get('/admin/mekanik/(:any)', 'Admin\Mekanik::detail/$1');
 
 // routes customer admin
-$routes->get('/admin/customer', 'Admin\Customer::index');
-$routes->delete('/admin/customer/(:num)', 'Admin\Customer::delete/$1');
+$routes->get('/admin/customer', 'Admin\AdminCustomer::index');
+$routes->delete('/admin/customer/(:num)', 'Admin\AdminCustomer::delete/$1');
 
 
 // routes service admin
 $routes->get('/admin/service', 'Admin\Service::index');
 
 // routes spareparts admin
-$routes->get('/admin/spareparts', 'Admin\Spareparts::index');
-$routes->get('/admin/spareparts/create', 'Admin\Spareparts::create');
-$routes->delete('/admin/spareparts/(:num)', 'Admin\Spareparts::delete/$1');
-// $routes->get('/admin/spareparts/(:segment)', 'Admin\Spareparts::$1');
-
-$routes->get('/admin/cart', 'Admin\Spareparts::cart');
+$routes->get('/admin/spareparts', 'Admin\AdminSpareparts::index');
+$routes->get('/admin/adminspareparts/create', 'Admin\AdminSpareparts::create');
+$routes->get('/admin/adminspareparts/edit/(:num)', 'Admin\AdminSpareparts::edit/$1');
+$routes->get('/admin/adminspareparts/update/(:num)', 'Admin\AdminSpareparts::update/$1');
+$routes->delete('/admin/adminspareparts/(:num)', 'Admin\AdminSpareparts::delete/$1');
 
 // routes transaksi admin
-$routes->get('/admin/transaksi', 'Admin\Transaksi::index');
-$routes->get('/admin/transaksi/selesai/(:num)', 'Admin\Transaksi::selesai/$1');
+$routes->get('/admin/admintransaksi', 'Admin\AdminTransaksi::index');
+$routes->get('/admin/admintransaksi/selesai/(:num)', 'Admin\AdminTransaksi::selesai/$1');
+$routes->get('/admin/admintransaksi/detail/(:any)', 'Admin\AdminTransaksi::detail/$1');
+
+$routes->get('/admin/admintselesai/detail/(:any)', 'Admin\AdminTselesai::detail/$1');
+$routes->get('/admin/admintselesai/cetakbukti/(:any)', 'Admin\AdminTselesai::cetakbukti/$1');
+
+// routes login customer
+$routes->get('/customer/customerlogin', 'Customer\CustomerLogin::index');
+$routes->get('/customer/customerlogin/login', 'Customer\CustomerLogin::login');
+$routes->get('/customer/logout', 'Customer\CustomerLogin::logout');
 
 // routes customer
 $routes->get('/customer', 'Customer\Customer::index');
-$routes->get('/customer/edit/(:any)', 'Customer\Customer::edit/$1');
-$routes->get('/customer/customer/mekanik/(:any)', 'Customer\Customer::edit/$1');
-
-// routes login customer
-$routes->get('/customer/login', 'Customer\Login::index');
-$routes->get('/customer/login/login', 'Customer\Login::login');
-$routes->get('/customer/logout', 'Customer\Login::logout');
 
 // routes register customer
 $routes->get('/customer/registercustomer', 'Customer\RegisterCustomer::index');
 $routes->get('/customer/registercustomer/register', 'Customer\RegisterCustomer::register');
 
 // routes order customer
-$routes->get('/customer/order', 'Customer\Order::index');
-$routes->get('/customer/order/save', 'Customer\Order::save');
+$routes->get('/customer/customerorder', 'Customer\CustomerOrder::index');
+$routes->get('/customer/customerorder/save', 'Customer\CustomerOrder::save');
+$routes->get('/customer/customerorder/ospareparts', 'Customer\CustomerOrder::ospareparts');
 
-// routes pembayaran customer
-$routes->get('/customer/pembayaran', 'Customer\Pembayaran::index');
+// routes customer keranjang
+$routes->get('/customer/customerkeranjang', 'Customer\CustomerKeranjang::index');
+$routes->get('/customer/customerkeranjang/deleteitem/(:any)', 'Customer\CustomerKeranjang::deleteitem/$1');
 
-// routes spareparts customer
-$routes->get('/customer/spareparts', 'Customer\Spareparts::index');
-
-$routes->get('/customer/order/ospareparts', 'Customer\Order::ospareparts');
 
 
 

@@ -79,7 +79,7 @@ class RegisterCustomer extends BaseController {
             'no_hp' => $this->request->getVar('no_hp'),
         ]);
 
-        return redirect()->to(base_url('/customer/login'))->with('message_success', 'Registrasi berhasil! Silahkan login');
+        return redirect()->to(base_url('/customer/customerlogin'))->with('message_success', 'Registrasi berhasil! Silahkan login');
         
     }
 }

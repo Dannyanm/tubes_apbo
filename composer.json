@@ -8,7 +8,8 @@
         "php": "^7.3 || ^8.0",
         "codeigniter4/framework": "^4",
         "jason-napolitano/codeigniter4-cart-module": "^1.1",
-        "almasaeed2010/adminlte": "~2.4"
+        "almasaeed2010/adminlte": "~2.4",
+        "spipu/html2pdf": "^5.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",
